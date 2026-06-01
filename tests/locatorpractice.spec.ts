@@ -1,0 +1,34 @@
+import {test, expect} from "@playwright/test";
+
+test("locatorpractice", async ({page})=>{
+    await page.goto("https://testautomationpractice.blogspot.com/");
+    await page.locator("#name").fill("Dhruv");
+    // await page.getByPlaceholder("Enter Name").fill("Dhruv");
+    // await page.locator("#email").fill("dhruv123@gmail.com");
+    await page.getByPlaceholder("Enter EMail").fill("dhruv123@gmail.com");
+    await page.locator("#phone").fill("1234567890");
+    // await page.getByPlaceholder("Enter Phone").fill("1234567890");
+    // await page.getByLabel("Address:").fill("ahmedabad");
+    await page.locator("div #textarea").fill("ahmedabad");
+    // await page.pause();
+    // await page.getByLabel("Male").click();
+    await page.locator("div #male").click();
+    // await page.locator("#monday").check();
+    // await page.getByLabel("monday").check();
+    // await page.locator("//input[@id='monday']").check();
+    await page.locator("//label[text()='Monday']").check();
+    // await page.locator(".form-group #country").click();
+    await page.locator("#country").selectOption("india");
+    await page.locator("#colors").selectOption("green");
+    await page.locator("[name='animals']").selectOption("dog");
+    await page.locator('#datepicker').click();
+    await page.getByRole('link', { name: '31' }).click();
+    await page.locator('#txtDate').click();
+    await page.getByRole('link', { name: '31' }).click();
+    await page.getByPlaceholder('Start Date').fill('2026-05-30');
+    await page.getByPlaceholder('End Date').fill('2026-05-31');
+    // await page.getByRole("button", { name : 'Submit'}).click();
+    // await page.locator(".submit-btn").click();
+    await page.locator("//button[text()='Submit']").first().click();
+    await page.pause();
+});
