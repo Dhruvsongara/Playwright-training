@@ -35,7 +35,13 @@ test("Croma", async ({browser})=>{
     await page.getByText('Apple iPhone 17e (256GB, Black)').click();
     const page1 = await page1Promise;
     await page1.getByText('White').click();
-    await page1.getByRole('button', { name: 'Select Plan' }).click();
+
+    const selectPlanButton = page1.getByRole('button', { name: 'Select Plan' });
+    await selectPlanButton.scrollIntoViewIfNeeded();
+    await selectPlanButton.click();
+
+    // await page1.evaluate(() => {window.scrollBy(0, 1000);});
+    // await page1.getByRole('button', { name: 'Select Plan' }).click();
     await page1.getByTestId('addToCart-button-click').click();
     await page1.getByRole('button', { name: 'Proceed to Cart' }).click();
     // await page.pause();
