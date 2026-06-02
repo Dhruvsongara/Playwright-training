@@ -12,7 +12,7 @@
 
 import { test, expect } from '@playwright/test';
  
-test.only("Croma", async ({browser})=>{
+test("Croma", async ({browser})=>{
  
     const context = await browser.newContext({
         permissions: []
