@@ -12,7 +12,7 @@
 
 import { test, expect } from '@playwright/test';
  
-test("Croma", async ({browser})=>{
+test.only("Croma", async ({browser})=>{
  
     const context = await browser.newContext({
         permissions: []
@@ -37,8 +37,8 @@ test("Croma", async ({browser})=>{
     await page1.getByText('White').click();
 
     const selectPlanButton = page1.getByRole('button',{name:' Select Plan'});
-    await selectPlanButton.scrollIntoViewIfNeeded();
-    await selectPlanButton.click();
+    // await selectPlanButton.scrollIntoViewIfNeeded();
+    // await selectPlanButton.click();
     
 
     // const selectPlanButton = page1.getByRole('button', { name: 'Select Plan' });
@@ -47,7 +47,7 @@ test("Croma", async ({browser})=>{
 
     // await page1.evaluate(() => {window.scrollBy(0, 1000);});
     // await page1.scrollIntoViewIfNeeded();
-    await page.mouse.wheel(0,1000);
+    // await page.mouse.wheel(0,1000);
     await page1.getByRole('button', { name: 'Select Plan' }).click();
     await page1.getByTestId('addToCart-button-click').click();
     await page1.getByRole('button', { name: 'Proceed to Cart' }).click();
