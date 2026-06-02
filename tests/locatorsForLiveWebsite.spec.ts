@@ -36,12 +36,19 @@ test("Croma", async ({browser})=>{
     const page1 = await page1Promise;
     await page1.getByText('White').click();
 
-    const selectPlanButton = page1.getByRole('button', { name: 'Select Plan' });
+    const selectPlanButton = page1.getByRole('button',{name:' Select Plan'});
     await selectPlanButton.scrollIntoViewIfNeeded();
     await selectPlanButton.click();
+    
+
+    // const selectPlanButton = page1.getByRole('button', { name: 'Select Plan' });
+    // await selectPlanButton.scrollIntoViewIfNeeded();
+    // await selectPlanButton.click();
 
     // await page1.evaluate(() => {window.scrollBy(0, 1000);});
-    // await page1.getByRole('button', { name: 'Select Plan' }).click();
+    // await page1.scrollIntoViewIfNeeded();
+    await page.mouse.wheel(0,1000);
+    await page1.getByRole('button', { name: 'Select Plan' }).click();
     await page1.getByTestId('addToCart-button-click').click();
     await page1.getByRole('button', { name: 'Proceed to Cart' }).click();
     // await page.pause();
