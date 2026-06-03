@@ -19,7 +19,7 @@ test("Croma", async ({browser})=>{
     });
     const page = await context.newPage();
     const searchTerm = "iphone";
-    await page.goto("https://www.croma.com/",{timeout:90000});
+    await page.goto("https://www.croma.com/",{timeout:100000});
     await page.context().clearPermissions();
     // await page.getByTestId("deliver").click();
     // await page.locator("//div[@data-testid='deliver']").last().click();
@@ -61,7 +61,7 @@ test("Croma", async ({browser})=>{
  
 test("Unicorn", async ({page})=>{
  
-    await page.goto('https://shop.unicornstore.in/',{timeout:90000});
+    await page.goto('https://shop.unicornstore.in/',{timeout:100000});
     await page.getByRole('link', { name: 'Shop ' }).click();
     await page.getByText('iPhone 17 ProNew').click();
     await page.locator('div').filter({ hasText: /^Cosmic Orange$/ }).click();
