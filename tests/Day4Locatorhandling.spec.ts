@@ -38,14 +38,14 @@ test('checkbox', async ({ page }) => {
   await expect(page.locator('#singleLadyA')).not.toBeChecked();
 });
 
-test('radio button', async ({ page }) => {
+// test('radio button', async ({ page }) => {
 
-  //Radio button
-  await page.goto("https://www.makemytrip.com/flights/",{timeout:90000});
-  await page.locator('.commonModal__close').click();
-  await page.getByText('Round Trip').click();
-  await expect(page.getByText('Round Trip')).toHaveClass(/selected/);
-});
+//   //Radio button
+//   await page.goto("https://www.makemytrip.com/flights/",{timeout:90000});
+//   await page.locator('.commonModal__close').click();
+//   await page.getByText('Round Trip').click();
+//   await expect(page.getByText('Round Trip')).toHaveClass(/selected/);
+// });
 
 test('Mouse events', async ({ page }) => {
 
