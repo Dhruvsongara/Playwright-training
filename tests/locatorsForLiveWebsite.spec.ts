@@ -24,9 +24,9 @@ test("Croma", async ({browser})=>{
     // await page.getByTestId("deliver").click();
     // await page.locator("//div[@data-testid='deliver']").last().click();
     // await page.getByPlaceholder("Enter Pincode").fill("383001");
-    await page.getByRole('textbox', { name: 'Enter Pincode' }).click();
-    await page.getByRole('textbox', { name: 'Enter Pincode' }).press('Control+A');
-    await page.getByRole('textbox', { name: 'Enter Pincode' }).fill('383001');
+    // await page.getByRole('textbox', { name: 'Enter Pincode' }).click();
+    // await page.getByRole('textbox', { name: 'Enter Pincode' }).press('Control+A');
+    // await page.getByRole('textbox', { name: 'Enter Pincode' }).fill('383001');
     await page.getByRole("button", {name : 'Continue'}).click();
     await page.locator("#searchV2").click();
     await page.locator("#searchV2").fill(searchTerm);
