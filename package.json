@@ -1,15 +1,38 @@
 {
-  "name": "playwright-training",
+  "name": "Playwright-training",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright automation testing project with TypeScript",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhruvsongara/Playwright-training.git"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "typescript"
+  ],
+  "author": "Dhruv songara",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dhruvsongara/Playwright-training/issues"
+  },
+  "homepage": "https://github.com/Dhruvsongara/Playwright-training#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "install": "^0.13.0"
   }
 }
