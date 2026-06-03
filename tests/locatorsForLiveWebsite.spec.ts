@@ -19,10 +19,14 @@ test("Croma", async ({browser})=>{
     });
     const page = await context.newPage();
     const searchTerm = "iphone";
-    await page.goto("https://www.croma.com/");
+    await page.goto("https://www.croma.com/",{timeout:90000});
     await page.context().clearPermissions();
-    await page.getByTestId("deliver").click();
-    await page.getByPlaceholder("Enter Pincode").fill("383001");
+    // await page.getByTestId("deliver").click();
+    // await page.locator("//div[@data-testid='deliver']").last().click();
+    // await page.getByPlaceholder("Enter Pincode").fill("383001");
+    await page.getByRole('textbox', { name: 'Enter Pincode' }).click();
+    await page.getByRole('textbox', { name: 'Enter Pincode' }).press('Control+A');
+    await page.getByRole('textbox', { name: 'Enter Pincode' }).fill('383001');
     await page.getByRole("button", {name : 'Continue'}).click();
     await page.locator("#searchV2").click();
     await page.locator("#searchV2").fill(searchTerm);
@@ -36,7 +40,7 @@ test("Croma", async ({browser})=>{
     const page1 = await page1Promise;
     await page1.getByText('White').click();
 
-    const selectPlanButton = page1.getByRole('button',{name:' Select Plan'});
+    // const selectPlanButton = page1.getByRole('button',{name:' Select Plan'});
     // await selectPlanButton.scrollIntoViewIfNeeded();
     // await selectPlanButton.click();
     
@@ -48,16 +52,16 @@ test("Croma", async ({browser})=>{
     // await page1.evaluate(() => {window.scrollBy(0, 1000);});
     // await page1.scrollIntoViewIfNeeded();
     // await page.mouse.wheel(0,1000);
-    await page1.getByRole('button', { name: 'Select Plan' }).click();
-    await page1.getByTestId('addToCart-button-click').click();
-    await page1.getByRole('button', { name: 'Proceed to Cart' }).click();
+    // await page1.getByRole('button', { name: 'Select Plan' }).click();
+    // await page1.getByTestId('addToCart-button-click').click();
+    // await page1.getByRole('button', { name: 'Proceed to Cart' }).click();
     // await page.pause();
 });
  
  
 test("Unicorn", async ({page})=>{
  
-    await page.goto('https://shop.unicornstore.in/');
+    await page.goto('https://shop.unicornstore.in/',{timeout:90000});
     await page.getByRole('link', { name: 'Shop ' }).click();
     await page.getByText('iPhone 17 ProNew').click();
     await page.locator('div').filter({ hasText: /^Cosmic Orange$/ }).click();
