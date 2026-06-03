@@ -21,10 +21,10 @@ test("locatorpractice", async ({page})=>{
     await page.locator("#country").selectOption("india");
     await page.locator("#colors").selectOption("green");
     await page.locator("[name='animals']").selectOption("dog");
-    await page.locator('#datepicker').click();
-    await page.getByRole('link', { name: '31' }).click();
-    await page.locator('#txtDate').click();
-    await page.getByRole('link', { name: '31' }).click();
+    // await page.locator('#datepicker').click();
+    // await page.getByRole('link', { name: '31' }).click();
+    // await page.locator('#txtDate').click();
+    // await page.getByRole('link', { name: '31' }).click();
     await page.getByPlaceholder('Start Date').fill('2026-05-30');
     await page.getByPlaceholder('End Date').fill('2026-05-31');
     // await page.getByRole("button", { name : 'Submit'}).click();
