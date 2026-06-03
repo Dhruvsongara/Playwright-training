@@ -41,7 +41,7 @@ test('checkbox', async ({ page }) => {
 test('radio button', async ({ page }) => {
 
   //Radio button
-  await page.goto("https://www.makemytrip.com/flights/");
+  await page.goto("https://www.makemytrip.com/flights/",{timeout:90000});
   await page.locator('.commonModal__close').click();
   await page.getByText('Round Trip').click();
   await expect(page.getByText('Round Trip')).toHaveClass(/selected/);
