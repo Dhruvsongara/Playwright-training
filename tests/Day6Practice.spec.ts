@@ -2,6 +2,15 @@ import {test,expect} from "@playwright/test";
  
 test("assertions", async ({page})=>{
  
+    // start custom tracing
+    // const context = await browser.newContext();
+    // const page = await context.newPage();
+    // await context.tracing.start({
+    //     screenshots: true,
+    //     snapshots: true,
+    //     sources: true,
+    // });
+
     await page.goto("https://www.apple.com/in/store",{timeout: 60000});
     await page.waitForLoadState("networkidle");
     await expect(page).toHaveURL('https://www.apple.com/in/store');
@@ -12,6 +21,12 @@ test("assertions", async ({page})=>{
     await expect(page.getByRole('heading', { name: 'The latest.' })).toBeVisible();
     await expect(page.getByLabel('iPhone', { exact: true })).toContainText('iPhone');
     // await expect(page.locator("rf-ccard-img-full")).toHaveCount(5);
+
+
+    // await context.tracing.stop({
+    //     path: "trace-apple.zip",
+    // });
+
 });
  
 // test("soft assertions", async ({page})=>{
