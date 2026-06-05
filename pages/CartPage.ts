@@ -85,7 +85,7 @@ export class CartPage{
 
     async finalCheckout(){
         await expect(this.checkoutPageVerify).toContainText('Billing Address');
-        await this.deliveryRadioButton.click();
+        await this.deliveryRadioButton.click({timeout:30000});
         await this.storeSelectionDropdown.click();
         await this.storeOptions.click();
         await expect(this.storeVerify).toContainText('Gandhinagar');
