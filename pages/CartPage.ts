@@ -43,7 +43,8 @@ export class CartPage{
         this.continueButton = page.getByRole('button', { name: 'Continue', exact: true });
         //<button type="submit" _ngcontent-lma-c106="" class="btn btn_continue">Continue</button> aka getByRole('button', { name: 'Continue', exact: true })
         this.checkoutPageVerify = page.locator('app-checkout');
-        this.deliveryRadioButton = page.locator('#shipToNearestStore');
+        // this.deliveryRadioButton = page.locator('#shipToNearestStore');
+        this.deliveryRadioButton = page.getByLabel("Ship to your nearest Unicorn store");
         this.storeSelectionDropdown = page.getByRole('button', { name: 'dropdown trigger' });
         this.storeOptions = page.getByRole('option', { name: 'Gandhinagar' });
         this.storeVerify = page.locator('address');
