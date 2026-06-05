@@ -40,7 +40,8 @@ export class CartPage{
         this.cityTextbox = page.locator('input[name="city"]');
         this.pincodeTextbox = page.locator('input[name="zip"]');
         this.stateDropdown = page.locator("select[name='zone_id']");
-        this.continueButton = page.getByRole('button', { name: 'Continue' });
+        this.continueButton = page.getByRole('button', { name: 'Continue', exact: true });
+        //<button type="submit" _ngcontent-lma-c106="" class="btn btn_continue">Continue</button> aka getByRole('button', { name: 'Continue', exact: true })
         this.checkoutPageVerify = page.locator('app-checkout');
         this.deliveryRadioButton = page.getByText('Ship to your nearest Unicorn');
         this.storeSelectionDropdown = page.getByRole('button', { name: 'dropdown trigger' });
