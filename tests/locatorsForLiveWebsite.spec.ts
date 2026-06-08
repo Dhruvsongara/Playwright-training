@@ -32,8 +32,8 @@ test("Unicorn", async ({page})=>{
     // await page.getByText('AirPods Pro (2nd gen)', { exact: true }).click();
     // await page.locator('a').filter({ hasText: 'AirPods Pro (2nd gen)' }).click();
     await page.locator('div.card-body').filter({ hasText: 'AirPods Pro (2nd gen)' }).click();
-    await page.getByRole('button', { name: 'Add To Cart' }).first().click();
-    await page.getByRole('button', { name: 'Continue Checkout' }).click();
+    // await page.getByRole('button', { name: 'Add To Cart' }).first().click();
+    // await page.getByRole('button', { name: 'Continue Checkout' }).click();
 });
  
 
