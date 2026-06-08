@@ -1,0 +1,1388 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Day9Practice.spec.ts >> Fail annotation
+- Location: tests/Day9Practice.spec.ts:67:6
+
+# Error details
+
+```
+Error: expect(locator).toHaveCount(expected) failed
+
+Locator:  locator('rf-ccard-img-full')
+Expected: 5
+Received: 0
+Timeout:  20000ms
+
+Call log:
+  - Expect "toHaveCount" with timeout 20000ms
+  - waiting for locator('rf-ccard-img-full')
+    44 × locator resolved to 0 elements
+       - unexpected value "0"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Global" [ref=e4]:
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Apple" [ref=e8] [cursor=pointer]:
+            - /url: https://www.apple.com/in/
+            - generic:
+              - img
+            - generic: Apple
+        - listitem [ref=e9]:
+          - generic [ref=e11]:
+            - list [ref=e13]:
+              - listitem [ref=e14]:
+                - link "Store" [ref=e15] [cursor=pointer]:
+                  - /url: /in/store
+                  - generic [ref=e16]:
+                    - generic:
+                      - img
+                    - generic: Store
+              - listitem:
+                - button "Store menu":
+                  - generic:
+                    - img
+            - list [ref=e18]:
+              - listitem [ref=e19]:
+                - link "Mac" [ref=e20] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/mac/
+                  - generic [ref=e21]:
+                    - generic:
+                      - img
+                    - generic: Mac
+              - listitem:
+                - button "Mac menu":
+                  - generic:
+                    - img
+            - list [ref=e23]:
+              - listitem [ref=e24]:
+                - link "iPad" [ref=e25] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/ipad/
+                  - generic [ref=e26]:
+                    - generic:
+                      - img
+                    - generic: iPad
+              - listitem:
+                - button "iPad menu":
+                  - generic:
+                    - img
+            - list [ref=e28]:
+              - listitem [ref=e29]:
+                - link "iPhone" [ref=e30] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/iphone/
+                  - generic [ref=e31]:
+                    - generic:
+                      - img
+                    - generic: iPhone
+              - listitem:
+                - button "iPhone menu":
+                  - generic:
+                    - img
+            - list [ref=e33]:
+              - listitem [ref=e34]:
+                - link "Watch" [ref=e35] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/watch/
+                  - generic [ref=e36]:
+                    - generic:
+                      - img
+                    - generic: Watch
+              - listitem:
+                - button "Watch menu":
+                  - generic:
+                    - img
+            - list [ref=e38]:
+              - listitem [ref=e39]:
+                - link "AirPods" [ref=e40] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/airpods/
+                  - generic [ref=e41]:
+                    - generic:
+                      - img
+                    - generic: AirPods
+              - listitem:
+                - button "AirPods menu":
+                  - generic:
+                    - img
+            - list [ref=e43]:
+              - listitem [ref=e44]:
+                - link "TV and Home" [ref=e45] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/tv-home/
+                  - generic [ref=e46]:
+                    - generic:
+                      - img
+                    - generic: TV & Home
+              - listitem:
+                - button "TV and Home menu":
+                  - generic:
+                    - img
+            - list [ref=e48]:
+              - listitem [ref=e49]:
+                - link "Entertainment" [ref=e50] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/services/
+                  - generic [ref=e51]:
+                    - generic:
+                      - img
+                    - generic: Entertainment
+              - listitem:
+                - button "Entertainment menu":
+                  - generic:
+                    - img
+            - list [ref=e53]:
+              - listitem [ref=e54]:
+                - link "Accessories" [ref=e55] [cursor=pointer]:
+                  - /url: /in/shop/accessories/all
+                  - generic [ref=e56]:
+                    - generic:
+                      - img
+                    - generic: Accessories
+              - listitem:
+                - button "Accessories menu":
+                  - generic:
+                    - img
+            - list [ref=e58]:
+              - listitem [ref=e59]:
+                - link "Support" [ref=e60] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/support/
+                  - generic [ref=e61]:
+                    - generic:
+                      - img
+                    - generic: Support
+              - listitem:
+                - button "Support menu":
+                  - generic:
+                    - img
+        - listitem [ref=e62]:
+          - button "Search apple.com" [ref=e63] [cursor=pointer]:
+            - generic:
+              - img
+        - listitem [ref=e64]:
+          - button "Shopping Bag" [ref=e66] [cursor=pointer]:
+            - generic:
+              - img
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70] [cursor=pointer]:
+          - link "Ask a Specialist (opens in new window) "
+        - text: 
+      - group "Gallery" [ref=e78]:
+        - generic [ref=e80]:
+          - generic [ref=e84]:
+            - text: Now you can buy Apple Watch with education savings.
+            - superscript [ref=e86]:
+              - generic [ref=e87]: Footnote
+              - text: ±
+          - generic [ref=e90]:
+            - text: Get up to 6 months of No Cost EMI
+            - superscript [ref=e92]:
+              - generic [ref=e93]: Footnote
+              - text: ◊
+            - text: plus up to ₹10000.00 instant cashback
+            - superscript [ref=e95]:
+              - generic [ref=e96]: Footnote
+              - text: ∆
+            - text: on selected products with eligible cards.
+            - button "See offers " [ref=e97] [cursor=pointer]
+          - generic [ref=e101]:
+            - text: Now you can buy Apple Watch with education savings.
+            - superscript [ref=e103]:
+              - generic [ref=e104]: Footnote
+              - text: ±
+        - generic:
+          - button "Previous" [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]: Previous
+            - img [ref=e108]
+          - button "Next" [ref=e110] [cursor=pointer]:
+            - generic [ref=e111]: Next
+            - img [ref=e113]
+      - generic [ref=e116]:
+        - heading "Store" [level=1] [ref=e118]
+        - generic [ref=e119]:
+          - generic [ref=e121]: The best way to buy the products you love.
+          - generic [ref=e122]:
+            - link "Connect with a Specialist (opens in new window) " [ref=e127] [cursor=pointer]:
+              - /url: "#"
+              - text: Connect with a Specialist
+              - generic [ref=e128]: (opens in new window)
+              - text: 
+            - link "Find an Apple Store (opens in a new window) " [ref=e132] [cursor=pointer]:
+              - /url: https://www.apple.com/in/retail
+              - text: Find an Apple Store
+              - generic [ref=e133]: (opens in a new window)
+              - text: 
+      - generic [ref=e137]:
+        - list "Product" [ref=e140]:
+          - listitem [ref=e141]:
+            - link "Mac" [ref=e148] [cursor=pointer]:
+              - /url: /in/shop/buy-mac
+          - listitem [ref=e149]:
+            - link "iPhone" [ref=e156] [cursor=pointer]:
+              - /url: /in/shop/buy-iphone
+          - listitem [ref=e157]:
+            - link "iPad" [ref=e164] [cursor=pointer]:
+              - /url: /in/shop/buy-ipad
+          - listitem [ref=e165]:
+            - link "Apple Watch" [ref=e172] [cursor=pointer]:
+              - /url: /in/shop/buy-watch
+          - listitem [ref=e173]:
+            - link "AirPods" [ref=e180] [cursor=pointer]:
+              - /url: https://www.apple.com/in/airpods
+          - listitem [ref=e181]:
+            - link "AirTag" [ref=e188] [cursor=pointer]:
+              - /url: /in/shop/accessories/all/airtag
+          - listitem [ref=e189]:
+            - link "Apple TV 4K" [ref=e196] [cursor=pointer]:
+              - /url: https://www.apple.com/in/apple-tv-4k
+          - listitem [ref=e197]:
+            - link "HomePod" [ref=e204] [cursor=pointer]:
+              - /url: /in/shop/homepod
+          - listitem [ref=e205]:
+            - link "Accessories" [ref=e212] [cursor=pointer]:
+              - /url: /in/shop/accessories/all
+        - generic:
+          - button "Previous - Product" [disabled]:
+            - generic:
+              - img
+            - generic: Previous - Product
+          - button "Next - Product" [ref=e213] [cursor=pointer]:
+            - img [ref=e215]
+            - generic [ref=e217]: Next - Product
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - heading "The latest." [level=2] [ref=e222]
+          - text: Take a look at what’s new right now.
+        - generic [ref=e223]:
+          - list [ref=e226]:
+            - listitem [ref=e227]:
+              - generic [ref=e231] [cursor=pointer]:
+                - img "iPhone 17 Pro, back exterior, cosmic orange colour, Pro Fusion camera system at top, 3 lenses, flash, microphone and LIDAR" [ref=e233]
+                - generic [ref=e234]:
+                  - link "iPhone 17 Pro" [ref=e236]:
+                    - /url: https://www.apple.com/in/shop/buy-iphone/iphone-17-pro
+                  - generic [ref=e237]:
+                    - generic [ref=e238]: All out Pro.
+                    - generic [ref=e239]:
+                      - text: From ₹134900.00
+                      - superscript [ref=e241]:
+                        - generic [ref=e242]: Footnote
+                        - text: †
+            - listitem [ref=e243]:
+              - generic [ref=e247] [cursor=pointer]:
+                - img "MacBook Neo in citrus colour, balanced on fingertips of open hand, screen displaying colourful abstract pattern" [ref=e249]
+                - generic [ref=e250]:
+                  - heading "NEW" [level=3] [ref=e251]
+                  - link "MacBook Neo" [ref=e253]:
+                    - /url: /in/shop/buy-mac/macbook-neo
+                  - generic [ref=e254]:
+                    - generic [ref=e255]: The magic of Mac at a surprising price.
+                    - generic [ref=e256]:
+                      - text: From ₹69900.00
+                      - superscript [ref=e258]:
+                        - generic [ref=e259]: Footnote
+                        - text: †
+            - listitem [ref=e260]:
+              - generic [ref=e264] [cursor=pointer]:
+                - img "Apple Watch Series 11, paired with Sport Loop strap, special edition, Pride colour (multicoloured wavy pattern), nylon weave textile material, hook-and-loop fastener, aluminium case, silver colour, matt finish, right side exterior, Digital Crown, Pride special edition analogue watch face" [ref=e266]
+                - generic [ref=e267]:
+                  - heading "NEW" [level=3] [ref=e268]
+                  - link "Apple Watch Pride Edition Sport Loop" [ref=e270]:
+                    - /url: /in/shop/product/mj594zm/a/40mm-pride-edition-sport-loop
+                  - generic [ref=e271]:
+                    - generic [ref=e272]: Radiate Pride with this vibrant woven strap.
+                    - generic [ref=e273]:
+                      - text: ₹4500.00
+                      - superscript [ref=e275]:
+                        - generic [ref=e276]: Footnote
+                        - text: †
+            - listitem [ref=e277]:
+              - generic [ref=e283] [cursor=pointer]:
+                - heading "NEW" [level=3] [ref=e284]
+                - link "iPhone 17e" [ref=e286]:
+                  - /url: https://www.apple.com/in/shop/buy-iphone/iphone-17e
+                - generic [ref=e287]:
+                  - generic [ref=e288]: Feature stacked. Value packed.
+                  - generic [ref=e289]:
+                    - text: From ₹64900.00
+                    - superscript [ref=e291]:
+                      - generic [ref=e292]: Footnote
+                      - text: †
+            - listitem [ref=e293]:
+              - generic [ref=e299] [cursor=pointer]:
+                - heading "NEW" [level=3] [ref=e300]
+                - link "AirPods Max 2" [ref=e302]:
+                  - /url: /in/shop/buy-airpods/airpods-max-2
+                - generic [ref=e303]:
+                  - generic [ref=e304]:
+                    - text: New intelligent features.
+                    - text: More immersive listening.
+                  - generic [ref=e305]:
+                    - text: ₹67900.00
+                    - superscript [ref=e307]:
+                      - generic [ref=e308]: Footnote
+                      - text: †
+            - listitem [ref=e309]:
+              - generic [ref=e315] [cursor=pointer]:
+                - heading "NEW" [level=3] [ref=e316]
+                - link "MacBook Pro" [ref=e318]:
+                  - /url: /in/shop/buy-mac/macbook-pro
+                - generic [ref=e319]:
+                  - generic [ref=e320]: Now with M5, M5 Pro and M5 Max.
+                  - generic [ref=e321]:
+                    - text: From ₹189900.00
+                    - superscript [ref=e323]:
+                      - generic [ref=e324]: Footnote
+                      - text: †
+            - listitem [ref=e325]:
+              - generic [ref=e331] [cursor=pointer]:
+                - heading "NEW" [level=3] [ref=e332]
+                - link "MacBook Air" [ref=e334]:
+                  - /url: /in/shop/buy-mac/macbook-air/macbook-air-with-m5-chip
+                - generic [ref=e335]:
+                  - generic [ref=e336]: Now supercharged by M5.
+                  - generic [ref=e337]:
+                    - text: From ₹119900.00
+                    - superscript [ref=e339]:
+                      - generic [ref=e340]: Footnote
+                      - text: †
+            - listitem [ref=e341]:
+              - generic [ref=e347] [cursor=pointer]:
+                - heading "NEW" [level=3] [ref=e348]
+                - link "iPad Air" [ref=e350]:
+                  - /url: /in/shop/buy-ipad/ipad-air
+                - generic [ref=e351]:
+                  - generic [ref=e352]: Now supercharged by M4.
+                  - generic [ref=e353]:
+                    - text: From ₹64900.00
+                    - superscript [ref=e355]:
+                      - generic [ref=e356]: Footnote
+                      - text: †
+            - listitem [ref=e357]:
+              - generic [ref=e363] [cursor=pointer]:
+                - link "Apple Watch Series 11" [ref=e365]:
+                  - /url: /in/shop/buy-watch/apple-watch
+                - generic [ref=e366]:
+                  - generic [ref=e367]: The ultimate way to watch your health.
+                  - generic [ref=e368]:
+                    - text: From ₹46900.00
+                    - superscript [ref=e370]:
+                      - generic [ref=e371]: Footnote
+                      - text: †
+            - listitem [ref=e372]:
+              - generic [ref=e378] [cursor=pointer]:
+                - link "iPhone 17" [ref=e380]:
+                  - /url: https://www.apple.com/in/shop/buy-iphone/iphone-17
+                - generic [ref=e381]:
+                  - generic [ref=e382]: Magichromatic.
+                  - generic [ref=e383]:
+                    - text: From ₹82900.00
+                    - superscript [ref=e385]:
+                      - generic [ref=e386]: Footnote
+                      - text: †
+            - listitem [ref=e387]:
+              - generic [ref=e393] [cursor=pointer]:
+                - link "iPhone Air" [ref=e395]:
+                  - /url: https://www.apple.com/in/shop/buy-iphone/iphone-air
+                - generic [ref=e396]:
+                  - generic [ref=e397]: The thinnest iPhone ever.
+                  - generic [ref=e398]:
+                    - text: From ₹119900.00
+                    - superscript [ref=e400]:
+                      - generic [ref=e401]: Footnote
+                      - text: †
+            - listitem [ref=e402]:
+              - generic [ref=e408] [cursor=pointer]:
+                - heading "NEW" [level=3] [ref=e409]
+                - link "Studio Display" [ref=e411]:
+                  - /url: /in/shop/buy-mac/studio-display
+                - generic [ref=e412]:
+                  - generic [ref=e413]: A sight to be bold.
+                  - generic [ref=e414]:
+                    - text: From ₹189900.00
+                    - superscript [ref=e416]:
+                      - generic [ref=e417]: Footnote
+                      - text: †
+            - listitem [ref=e418]:
+              - generic [ref=e424] [cursor=pointer]:
+                - heading "NEW" [level=3] [ref=e425]
+                - link "Studio Display XDR" [ref=e427]:
+                  - /url: /in/shop/buy-mac/studio-display-xdr
+                - generic [ref=e428]:
+                  - generic [ref=e429]: Pixel sharpener.
+                  - generic [ref=e430]:
+                    - text: From ₹399900.00
+                    - superscript [ref=e432]:
+                      - generic [ref=e433]: Footnote
+                      - text: †
+            - listitem [ref=e434]:
+              - generic [ref=e440] [cursor=pointer]:
+                - link "Apple Watch SE 3" [ref=e442]:
+                  - /url: /in/shop/buy-watch/apple-watch-se
+                - generic [ref=e443]:
+                  - generic [ref=e444]: Walk it. Talk it. Track it. Love it.
+                  - generic [ref=e445]:
+                    - text: From ₹25900.00
+                    - superscript [ref=e447]:
+                      - generic [ref=e448]: Footnote
+                      - text: †
+          - generic:
+            - button "Previous -" [disabled]:
+              - generic:
+                - img
+              - generic: Previous -
+            - button "Next -" [ref=e449] [cursor=pointer]:
+              - img [ref=e451]
+              - generic [ref=e453]: Next -
+      - generic [ref=e456]:
+        - generic [ref=e457]:
+          - heading "The Apple Store difference." [level=2] [ref=e458]
+          - text: Even more reasons to shop with us.
+        - generic [ref=e459]:
+          - list "The Apple Store difference." [ref=e462]:
+            - listitem [ref=e463]:
+              - generic [ref=e468] [cursor=pointer]:
+                - img [ref=e470]
+                - button "No Cost EMI. Footnote ◊ Plus Instant Cashback. Footnote ∆" [ref=e473]:
+                  - paragraph [ref=e474]:
+                    - text: No Cost EMI.
+                    - superscript [ref=e476]:
+                      - generic: Footnote
+                      - text: ◊
+                    - text: Plus Instant Cashback.
+                    - superscript [ref=e478]:
+                      - generic: Footnote
+                      - text: ∆
+            - listitem [ref=e479]:
+              - generic [ref=e484] [cursor=pointer]:
+                - img [ref=e486]
+                - button "Exchange your smartphone, get ₹2500.00-₹57000.00 in credit towards a new one. Footnote ‡" [ref=e490]:
+                  - paragraph [ref=e491]:
+                    - text: Exchange your smartphone, get ₹2500.00-₹57000.00 in credit towards a new one.
+                    - superscript [ref=e493]:
+                      - generic: Footnote
+                      - text: ‡
+            - listitem [ref=e494]:
+              - generic [ref=e499] [cursor=pointer]:
+                - img [ref=e501]
+                - button "Customise your Mac." [ref=e507]:
+                  - paragraph [ref=e508]: Customise your Mac.
+            - listitem [ref=e509]:
+              - generic [ref=e514] [cursor=pointer]:
+                - img [ref=e516]
+                - button "Make them yours. Engrave a mix of emoji, names and numbers for free." [ref=e520]:
+                  - paragraph [ref=e521]: Make them yours. Engrave a mix of emoji, names and numbers for free.
+            - listitem [ref=e522]:
+              - generic [ref=e527] [cursor=pointer]:
+                - img [ref=e529]
+                - button "Enjoy free delivery, or easy pickup from an Apple Store." [ref=e533]:
+                  - paragraph [ref=e534]: Enjoy free delivery, or easy pickup from an Apple Store.
+            - listitem [ref=e535]:
+              - generic [ref=e540] [cursor=pointer]:
+                - img [ref=e542]
+                - button "Trade in your eligible Mac, Apple Watch or iPad for instant credit. Footnote ‡ In-store only." [ref=e546]:
+                  - paragraph [ref=e547]:
+                    - generic:
+                      - text: Trade in your eligible Mac, Apple Watch or iPad for instant credit.
+                      - generic:
+                        - superscript:
+                          - generic: Footnote
+                          - text: ‡
+                    - text: In-store only.
+          - generic:
+            - button "Previous - The Apple Store difference." [disabled]:
+              - generic:
+                - img
+              - generic: Previous - The Apple Store difference.
+            - button "Next - The Apple Store difference." [ref=e548] [cursor=pointer]:
+              - img [ref=e550]
+              - generic [ref=e552]: Next - The Apple Store difference.
+      - generic [ref=e555]:
+        - generic [ref=e556]:
+          - heading "Help is here." [level=2] [ref=e557]
+          - text: Whenever and however you need it.
+        - generic [ref=e558]:
+          - list "Help is here." [ref=e561]:
+            - listitem [ref=e562]:
+              - generic [ref=e568] [cursor=pointer]:
+                - link "Shop with a Specialist over video - (opens in new window)" [ref=e570]:
+                  - /url: https://contactretail.apple.com/?c=in&ag=SWSOV&pg=iphone_storemain&l=en&ap=com
+                  - generic [ref=e571]: Shop with a Specialist over video
+                  - generic: "- (opens in new window)"
+                - generic [ref=e573]: Choose your next device in a guided, one-way video session.
+            - listitem [ref=e574]:
+              - generic [ref=e580] [cursor=pointer]:
+                - heading "APPLE SPECIALIST" [level=3] [ref=e581]
+                - button "Shop one on one with a Specialist online." [ref=e583]
+            - listitem [ref=e584]:
+              - generic [ref=e590] [cursor=pointer]:
+                - heading "Today at Apple" [level=3] [ref=e591]
+                - link "Explore Apple Intelligence - (opens in new window)" [ref=e593]:
+                  - /url: https://www.apple.com/in/today/event/spotlight-apple-intelligence?cid=rem-in-taa-store-consumer-spotlight-ai
+                  - text: Explore Apple Intelligence
+                  - generic: "- (opens in new window)"
+                - generic [ref=e594]: Come and try it for yourself in a free session at the Apple Store.
+            - listitem [ref=e595]:
+              - generic [ref=e601] [cursor=pointer]:
+                - heading "Today at Apple" [level=3] [ref=e602]
+                - link "Join free sessions at your Apple Store. - (opens in new window)" [ref=e604]:
+                  - /url: https://www.apple.com/in/today/calendar?sessions=skills&topics=daily-sessions&cid=rem-in-taa-store-fundm-cal
+                  - text: Join free sessions at your Apple Store.
+                  - generic: "- (opens in new window)"
+                - generic [ref=e605]: Learn about the latest features and how to go further with your Apple devices.
+            - listitem [ref=e606]:
+              - generic [ref=e612] [cursor=pointer]:
+                - heading "SMALL BUSINESS" [level=3] [ref=e613]
+                - link "From enterprise to small business, we’ll work with you. Footnote 1 - (opens in new window)" [ref=e615]:
+                  - /url: https://www.apple.com/in/retail/business
+                  - text: From enterprise to small business, we’ll work with you.
+                  - superscript [ref=e617]:
+                    - generic: Footnote
+                    - text: "1"
+                  - generic: "- (opens in new window)"
+            - listitem [ref=e618]:
+              - generic [ref=e624] [cursor=pointer]:
+                - heading "PERSONAL SETUP" [level=3] [ref=e625]
+                - button "Set up your new device with help from a Specialist." [ref=e627]
+                - generic [ref=e628]: Let us guide you through data transfer, the latest features and more, in an online, one-to-one session.
+            - listitem [ref=e629]:
+              - generic [ref=e633] [cursor=pointer]:
+                - generic [ref=e635]:
+                  - heading "WATCH AND LEARN" [level=3] [ref=e636]
+                  - generic [ref=e637]: Need support? Our teams are here for you.
+                - generic [ref=e638]:
+                  - generic [ref=e639]: Get a quick overview of the Apple Support App in this video.
+                  - button "Play Need support? Our teams are here for you." [ref=e640]:
+                    - generic [ref=e641]: 
+                    - generic [ref=e642]: Play
+          - generic:
+            - button "Previous - Help is here." [disabled]:
+              - generic:
+                - img
+              - generic: Previous - Help is here.
+            - button "Next - Help is here." [ref=e643] [cursor=pointer]:
+              - img [ref=e645]
+              - generic [ref=e647]: Next - Help is here.
+      - generic [ref=e650]:
+        - generic [ref=e651]:
+          - heading "Accessories." [level=2] [ref=e652]
+          - text: Essentials that pair perfectly with your favourite devices.
+        - generic [ref=e653]:
+          - list "Accessories." [ref=e656]:
+            - listitem [ref=e657]:
+              - generic [ref=e663] [cursor=pointer]:
+                - link "Here and wow. - (opens in new window)" [ref=e665]:
+                  - /url: /in/shop/accessories/all/new-arrivals
+                  - text: Here and wow.
+                  - generic: "- (opens in new window)"
+                - generic [ref=e666]:
+                  - text: The accessories you love.
+                  - text: In a fresh mix of colours.
+            - listitem [ref=e667]:
+              - generic [ref=e672] [cursor=pointer]:
+                - list "iPhone 17 Pro Silicone Case with MagSafe – Bright Guava Available colours:" [ref=e673]:
+                  - listitem "Bright Guava" [ref=e674]:
+                    - img "Bright Guava" [ref=e675]
+                  - listitem "Vanilla" [ref=e676]:
+                    - img "Vanilla" [ref=e677]
+                  - listitem "Neon Yellow" [ref=e678]:
+                    - img "Neon Yellow" [ref=e679]
+                  - listitem "Midnight" [ref=e680]:
+                    - img "Midnight" [ref=e681]
+                  - listitem "Terra Cotta" [ref=e682]:
+                    - img "Terra Cotta" [ref=e683]
+                  - listitem "Purple Fog" [ref=e684]:
+                    - img "Purple Fog" [ref=e685]
+                  - listitem [ref=e686]: +
+                - generic [ref=e688]: New
+                - heading "iPhone 17 Pro Silicone Case with MagSafe – Bright Guava - New" [level=3] [ref=e689]:
+                  - link "iPhone 17 Pro Silicone Case with MagSafe – Bright Guava - New" [ref=e690]:
+                    - /url: https://www.apple.com/in/shop/product/mhw04zm/a/iphone-17-pro-silicone-case-with-magsafe-bright-guava
+                    - generic [ref=e691]: iPhone 17 Pro Silicone Case with MagSafe – Bright Guava
+                    - generic [ref=e692]: "- New"
+                - generic [ref=e694]: MRP ₹4900.00 (Incl. of all taxes)
+            - listitem [ref=e695]:
+              - generic [ref=e700] [cursor=pointer]:
+                - list "Crossbody Strap - Bright Guava Available colours:" [ref=e701]:
+                  - listitem "Soft Pink" [ref=e702]:
+                    - img "Soft Pink" [ref=e703]
+                  - listitem "Bright Guava" [ref=e704]:
+                    - img "Bright Guava" [ref=e705]
+                  - listitem "Neon Yellow" [ref=e706]:
+                    - img "Neon Yellow" [ref=e707]
+                  - listitem "Blue" [ref=e708]:
+                    - img "Blue" [ref=e709]
+                  - listitem "Light Blue" [ref=e710]:
+                    - img "Light Blue" [ref=e711]
+                  - listitem "Tan" [ref=e712]:
+                    - img "Tan" [ref=e713]
+                  - listitem [ref=e714]: +
+                - generic [ref=e716]: New
+                - heading "Crossbody Strap - Bright Guava - New" [level=3] [ref=e717]:
+                  - link "Crossbody Strap - Bright Guava - New" [ref=e718]:
+                    - /url: https://www.apple.com/in/shop/product/mhyx4zm/a/crossbody-strap-bright-guava
+                    - generic [ref=e719]: Crossbody Strap - Bright Guava
+                    - generic [ref=e720]: "- New"
+                - generic [ref=e722]: MRP ₹5900.00 (Incl. of all taxes)
+            - listitem [ref=e723]:
+              - generic [ref=e728] [cursor=pointer]:
+                - heading "MagSafe Charger (1m)" [level=3] [ref=e729]:
+                  - link "MagSafe Charger (1m)" [ref=e730]:
+                    - /url: https://www.apple.com/in/shop/product/mgd74zm/a/magsafe-charger-1m
+                    - generic [ref=e731]: MagSafe Charger (1m)
+                - generic [ref=e733]: MRP ₹4500.00 (Incl. of all taxes)
+            - listitem [ref=e734]:
+              - generic [ref=e739] [cursor=pointer]:
+                - generic [ref=e741]: New
+                - heading "iPhone 17e Clear Case with MagSafe - New" [level=3] [ref=e742]:
+                  - link "iPhone 17e Clear Case with MagSafe - New" [ref=e743]:
+                    - /url: https://www.apple.com/in/shop/product/mhwc4zm/a/iphone-17e-clear-case-with-magsafe
+                    - generic [ref=e744]: iPhone 17e Clear Case with MagSafe
+                    - generic [ref=e745]: "- New"
+                - generic [ref=e747]: MRP ₹4900.00 (Incl. of all taxes)
+            - listitem [ref=e748]:
+              - generic [ref=e753] [cursor=pointer]:
+                - list "46mm Pride Edition Sport Loop Available colours:" [ref=e754]:
+                  - listitem "Pride Edition" [ref=e755]:
+                    - img "Pride Edition" [ref=e756]
+                - generic [ref=e758]: New
+                - heading "46mm Pride Edition Sport Loop - New" [level=3] [ref=e759]:
+                  - link "46mm Pride Edition Sport Loop - New" [ref=e760]:
+                    - /url: https://www.apple.com/in/shop/product/mj5c4zm/a/46mm-pride-edition-sport-loop
+                    - generic [ref=e761]: 46mm Pride Edition Sport Loop
+                    - generic [ref=e762]: "- New"
+                - generic [ref=e764]: MRP ₹4500.00 (Incl. of all taxes)
+            - listitem [ref=e765]:
+              - generic [ref=e770] [cursor=pointer]:
+                - list "46mm Clementine Sport Band - M/L Available colours:" [ref=e771]:
+                  - listitem "Soft Pink" [ref=e772]:
+                    - img "Soft Pink" [ref=e773]
+                  - listitem "Clementine" [ref=e774]:
+                    - img "Clementine" [ref=e775]
+                  - listitem "Bright Guava" [ref=e776]:
+                    - img "Bright Guava" [ref=e777]
+                  - listitem "Anchor Blue" [ref=e778]:
+                    - img "Anchor Blue" [ref=e779]
+                  - listitem "Midnight" [ref=e780]:
+                    - img "Midnight" [ref=e781]
+                  - listitem "Starlight" [ref=e782]:
+                    - img "Starlight" [ref=e783]
+                  - listitem [ref=e784]: +
+                - generic [ref=e786]: New
+                - heading "46mm Clementine Sport Band - M/L - New" [level=3] [ref=e787]:
+                  - link "46mm Clementine Sport Band - M/L - New" [ref=e788]:
+                    - /url: https://www.apple.com/in/shop/product/mhyl4zm/a/46mm-clementine-sport-band-m-l
+                    - generic [ref=e789]: 46mm Clementine Sport Band - M/L
+                    - generic [ref=e790]: "- New"
+                - generic [ref=e792]: MRP ₹4500.00 (Incl. of all taxes)
+            - listitem [ref=e793]:
+              - generic [ref=e798] [cursor=pointer]:
+                - list "Magic Keyboard for iPad Air 13\" (M4) - US English - Black Available colours:" [ref=e799]:
+                  - listitem "White" [ref=e800]:
+                    - img "White" [ref=e801]
+                  - listitem "Black" [ref=e802]:
+                    - img "Black" [ref=e803]
+                - heading "Magic Keyboard for iPad Air 13\" (M4) - US English - Black" [level=3] [ref=e804]:
+                  - link "Magic Keyboard for iPad Air 13\" (M4) - US English - Black" [ref=e805]:
+                    - /url: https://www.apple.com/in/shop/product/mgyy4hn/a/magic-keyboard-for-ipad-air-13-m4-us-english-black
+                    - generic [ref=e806]: Magic Keyboard for iPad Air 13" (M4) - US English - Black
+                - generic [ref=e808]: MRP ₹29900.00 (Incl. of all taxes)
+            - listitem [ref=e809]:
+              - generic [ref=e814] [cursor=pointer]:
+                - heading "iPhone Air MagSafe Battery" [level=3] [ref=e815]:
+                  - link "iPhone Air MagSafe Battery" [ref=e816]:
+                    - /url: https://www.apple.com/in/shop/product/mgpg4hn/a/iphone-air-magsafe-battery
+                    - generic [ref=e817]: iPhone Air MagSafe Battery
+                - generic [ref=e819]: MRP ₹11900.00 (Incl. of all taxes)
+            - listitem [ref=e820]:
+              - generic [ref=e825] [cursor=pointer]:
+                - list "iPhone Air Bumper - Tan Available colours:" [ref=e826]:
+                  - listitem "Light Blue" [ref=e827]:
+                    - img "Light Blue" [ref=e828]
+                  - listitem "Tan" [ref=e829]:
+                    - img "Tan" [ref=e830]
+                  - listitem "Light Grey" [ref=e831]:
+                    - img "Light Grey" [ref=e832]
+                  - listitem "Black" [ref=e833]:
+                    - img "Black" [ref=e834]
+                - heading "iPhone Air Bumper - Tan" [level=3] [ref=e835]:
+                  - link "iPhone Air Bumper - Tan" [ref=e836]:
+                    - /url: https://www.apple.com/in/shop/product/mh044zm/a/iphone-air-bumper-tan
+                    - generic [ref=e837]: iPhone Air Bumper - Tan
+                - generic [ref=e839]: MRP ₹3900.00 (Incl. of all taxes)
+            - listitem [ref=e840]:
+              - generic [ref=e845] [cursor=pointer]:
+                - heading "20W USB-C Power Adapter" [level=3] [ref=e846]:
+                  - link "20W USB-C Power Adapter" [ref=e847]:
+                    - /url: https://www.apple.com/in/shop/product/muvr3hn/a/20w-usb-c-power-adapter
+                    - generic [ref=e848]: 20W USB-C Power Adapter
+                - generic [ref=e850]: MRP ₹2190.00 (Incl. of all taxes)
+            - listitem [ref=e851]:
+              - link "Explore all accessories. - (opens in new window)" [ref=e859] [cursor=pointer]:
+                - /url: /in/shop/accessories/all
+                - text: Explore all accessories.
+                - generic: "- (opens in new window)"
+          - generic:
+            - button "Previous - Accessories." [disabled]:
+              - generic:
+                - img
+              - generic: Previous - Accessories.
+            - button "Next - Accessories." [ref=e860] [cursor=pointer]:
+              - img [ref=e862]
+              - generic [ref=e864]: Next - Accessories.
+      - generic [ref=e867]:
+        - generic [ref=e868]:
+          - heading "Loud and clear." [level=2] [ref=e869]
+          - text: Unparalleled choices for rich, high-quality sound.
+        - generic [ref=e870]:
+          - list "Loud and clear." [ref=e873]:
+            - listitem [ref=e874]:
+              - generic [ref=e880] [cursor=pointer]:
+                - link "Get 3 months of Apple Music free. - (opens in new window)" [ref=e882]:
+                  - /url: https://www.apple.com/in/apple-music
+                  - text: Get 3 months of Apple Music free.
+                  - generic: "- (opens in new window)"
+                - generic [ref=e883]:
+                  - text: Included with the purchase of selected Apple devices.
+                  - superscript [ref=e885]:
+                    - generic [ref=e886]: Footnote
+                    - text: ※
+            - listitem [ref=e887]:
+              - generic [ref=e892] [cursor=pointer]:
+                - list "AirPods Max 2 - Midnight Available colours:" [ref=e893]:
+                  - listitem "Blue" [ref=e894]:
+                    - img "Blue" [ref=e895]
+                  - listitem "Purple" [ref=e896]:
+                    - img "Purple" [ref=e897]
+                  - listitem "Midnight" [ref=e898]:
+                    - img "Midnight" [ref=e899]
+                  - listitem "Starlight" [ref=e900]:
+                    - img "Starlight" [ref=e901]
+                  - listitem "Orange" [ref=e902]:
+                    - img "Orange" [ref=e903]
+                - generic [ref=e905]: New
+                - heading "AirPods Max 2 - Midnight - New" [level=3] [ref=e906]:
+                  - link "AirPods Max 2 - Midnight - New" [ref=e907]:
+                    - /url: https://www.apple.com/in/shop/product/mhwk4hn/a/midnight
+                    - generic [ref=e908]: AirPods Max 2 - Midnight
+                    - generic [ref=e909]: "- New"
+                - generic [ref=e911]: MRP ₹67900.00 (Incl. of all taxes)
+            - listitem [ref=e912]:
+              - generic [ref=e917] [cursor=pointer]:
+                - generic [ref=e919]: Free Engraving
+                - heading "AirPods Pro 3 - Free Engraving" [level=3] [ref=e920]:
+                  - link "AirPods Pro 3 - Free Engraving" [ref=e921]:
+                    - /url: https://www.apple.com/in/shop/product/mfhp4hn/a
+                    - generic [ref=e922]: AirPods Pro 3
+                    - generic [ref=e923]: "- Free Engraving"
+                - generic [ref=e925]: MRP ₹25900.00 (Incl. of all taxes)
+            - listitem [ref=e926]:
+              - generic [ref=e931] [cursor=pointer]:
+                - generic [ref=e933]: Free Engraving
+                - heading "AirPods 4 with Active Noise Cancellation - Free Engraving" [level=3] [ref=e934]:
+                  - link "AirPods 4 with Active Noise Cancellation - Free Engraving" [ref=e935]:
+                    - /url: https://www.apple.com/in/shop/product/mxp93hn/a/with-active-noise-cancellation
+                    - generic [ref=e936]: AirPods 4 with Active Noise Cancellation
+                    - generic [ref=e937]: "- Free Engraving"
+                - generic [ref=e939]: MRP ₹17900.00 (Incl. of all taxes)
+            - listitem [ref=e940]:
+              - generic [ref=e945] [cursor=pointer]:
+                - list "Powerbeats Pro 2 – High-Performance Earbuds – Electric Orange Available colours:" [ref=e946]:
+                  - listitem "Jet Black" [ref=e947]:
+                    - img "Jet Black" [ref=e948]
+                  - listitem "Quick Sand" [ref=e949]:
+                    - img "Quick Sand" [ref=e950]
+                  - listitem "Hyper Purple" [ref=e951]:
+                    - img "Hyper Purple" [ref=e952]
+                  - listitem "Electric Orange" [ref=e953]:
+                    - img "Electric Orange" [ref=e954]
+                - heading "Powerbeats Pro 2 – High-Performance Earbuds – Electric Orange" [level=3] [ref=e955]:
+                  - link "Powerbeats Pro 2 – High-Performance Earbuds – Electric Orange" [ref=e956]:
+                    - /url: https://www.apple.com/in/shop/product/mx743zm/a/powerbeats-pro-2-high-performance-earbuds-electric-orange
+                    - generic [ref=e957]: Powerbeats Pro 2 – High-Performance Earbuds – Electric Orange
+                - generic [ref=e959]: MRP ₹29900.00 (Incl. of all taxes)
+            - listitem [ref=e960]:
+              - generic [ref=e965] [cursor=pointer]:
+                - list "HomePod - Midnight Available colours:" [ref=e966]:
+                  - listitem "Midnight" [ref=e967]:
+                    - img "Midnight" [ref=e968]
+                  - listitem "White" [ref=e969]:
+                    - img "White" [ref=e970]
+                - heading "HomePod - Midnight" [level=3] [ref=e971]:
+                  - link "HomePod - Midnight" [ref=e972]:
+                    - /url: https://www.apple.com/in/shop/product/mdew4hn/a/midnight
+                    - generic [ref=e973]: HomePod - Midnight
+                - generic [ref=e975]: MRP ₹32900.00 (Incl. of all taxes)
+            - listitem [ref=e976]:
+              - generic [ref=e981] [cursor=pointer]:
+                - list "HomePod mini - Orange Available colours:" [ref=e982]:
+                  - listitem "Blue" [ref=e983]:
+                    - img "Blue" [ref=e984]
+                  - listitem "Midnight" [ref=e985]:
+                    - img "Midnight" [ref=e986]
+                  - listitem "White" [ref=e987]:
+                    - img "White" [ref=e988]
+                  - listitem "Yellow" [ref=e989]:
+                    - img "Yellow" [ref=e990]
+                  - listitem "Orange" [ref=e991]:
+                    - img "Orange" [ref=e992]
+                - heading "HomePod mini - Orange" [level=3] [ref=e993]:
+                  - link "HomePod mini - Orange" [ref=e994]:
+                    - /url: https://www.apple.com/in/shop/product/mj2d3hn/a/orange
+                    - generic [ref=e995]: HomePod mini - Orange
+                - generic [ref=e997]: MRP ₹10900.00 (Incl. of all taxes)
+            - listitem [ref=e998]:
+              - generic [ref=e1003] [cursor=pointer]:
+                - list "Beats Solo 4 – On-Ear Wireless Headphones – Cloud Pink Available colours:" [ref=e1004]:
+                  - listitem "Matt Black" [ref=e1005]:
+                    - img "Matt Black" [ref=e1006]
+                  - listitem "Slate Blue" [ref=e1007]:
+                    - img "Slate Blue" [ref=e1008]
+                  - listitem "Cloud Pink" [ref=e1009]:
+                    - img "Cloud Pink" [ref=e1010]
+                - heading "Beats Solo 4 – On-Ear Wireless Headphones – Cloud Pink" [level=3] [ref=e1011]:
+                  - link "Beats Solo 4 – On-Ear Wireless Headphones – Cloud Pink" [ref=e1012]:
+                    - /url: https://www.apple.com/in/shop/product/muw33zm/a/beats-solo-4-on-ear-wireless-headphones-cloud-pink
+                    - generic [ref=e1013]: Beats Solo 4 – On-Ear Wireless Headphones – Cloud Pink
+                - generic [ref=e1015]: MRP ₹22900.00 (Incl. of all taxes)
+            - listitem [ref=e1016]:
+              - generic [ref=e1021] [cursor=pointer]:
+                - list "Beats Pill – Wireless Bluetooth® Speaker – Statement Red Available colours:" [ref=e1022]:
+                  - listitem "Matt Black" [ref=e1023]:
+                    - img "Matt Black" [ref=e1024]
+                  - listitem "Statement Red" [ref=e1025]:
+                    - img "Statement Red" [ref=e1026]
+                  - listitem "Champagne Gold" [ref=e1027]:
+                    - img "Champagne Gold" [ref=e1028]
+                - heading "Beats Pill – Wireless Bluetooth® Speaker – Statement Red" [level=3] [ref=e1029]:
+                  - link "Beats Pill – Wireless Bluetooth® Speaker – Statement Red" [ref=e1030]:
+                    - /url: https://www.apple.com/in/shop/product/mwqw3zm/a/beats-pill-wireless-bluetooth-speaker-statement-red
+                    - generic [ref=e1031]: Beats Pill – Wireless Bluetooth® Speaker – Statement Red
+                - generic [ref=e1033]: MRP ₹16900.00 (Incl. of all taxes)
+          - generic:
+            - button "Previous - Loud and clear." [disabled]:
+              - generic:
+                - img
+              - generic: Previous - Loud and clear.
+            - button "Next - Loud and clear." [ref=e1034] [cursor=pointer]:
+              - img [ref=e1036]
+              - generic [ref=e1038]: Next - Loud and clear.
+      - generic [ref=e1041]:
+        - generic [ref=e1042]:
+          - heading "The Apple experience." [level=2] [ref=e1043]
+          - text: Do even more with Apple products and services.
+        - generic [ref=e1044]:
+          - list "The Apple experience." [ref=e1047]:
+            - listitem [ref=e1048]:
+              - link "Apple Intelligence. Create, communicate and get things done effortlessly. Footnote 2 - (opens in new window)" [ref=e1056] [cursor=pointer]:
+                - /url: https://www.apple.com/in/apple-intelligence
+                - generic: Apple Intelligence.
+                - text: Create, communicate and get things done effortlessly.
+                - superscript [ref=e1058]:
+                  - generic: Footnote
+                  - text: "2"
+                - generic: "- (opens in new window)"
+            - listitem [ref=e1059]:
+              - generic [ref=e1065] [cursor=pointer]:
+                - heading "CONTINUITY" [level=3] [ref=e1066]:
+                  - paragraph [ref=e1067]: CONTINUITY
+                - link "Powerful alone. Superpowered together. - (opens in new window)" [ref=e1069]:
+                  - /url: https://www.apple.com/in/macos/continuity
+                  - paragraph [ref=e1070]: Powerful alone. Superpowered together.
+                  - generic: "- (opens in new window)"
+            - listitem [ref=e1071]:
+              - link "Four Apple services. One easy subscription. - (opens in new window)" [ref=e1079] [cursor=pointer]:
+                - /url: https://www.apple.com/in/apple-one
+                - text: Four Apple services. One easy subscription.
+                - generic: "- (opens in new window)"
+            - listitem [ref=e1080]:
+              - generic [ref=e1086] [cursor=pointer]:
+                - link "We’ve got you covered. - Apple Care+ - (opens in new window)" [ref=e1088]:
+                  - /url: https://www.apple.com/in/support/products
+                  - text: We’ve got you covered.
+                  - generic: "- Apple Care+"
+                  - generic: "- (opens in new window)"
+                - generic [ref=e1089]: AppleCare+ now comes with unlimited repairs for accidental damage protection.
+            - listitem [ref=e1090]:
+              - generic [ref=e1096] [cursor=pointer]:
+                - heading "HOME" [level=3] [ref=e1097]
+                - link "See how one app can control your entire home. - (opens in new window)" [ref=e1099]:
+                  - /url: https://www.apple.com/in/ios/home
+                  - text: See how one app can control your entire home.
+                  - generic: "- (opens in new window)"
+          - generic:
+            - button "Previous - The Apple experience." [disabled]:
+              - generic:
+                - img
+              - generic: Previous - The Apple experience.
+            - button "Next - The Apple experience." [ref=e1100] [cursor=pointer]:
+              - img [ref=e1102]
+              - generic [ref=e1104]: Next - The Apple experience.
+      - generic [ref=e1107]:
+        - generic [ref=e1108]:
+          - heading "Savings and offers." [level=2] [ref=e1109]
+          - text: Exclusive deals, special stores and more.
+        - generic [ref=e1110]:
+          - list "<string astro:id=\"text asset\" astro:keyPath=\"pub.step0.shelf.special_stores.h_india\" />" [ref=e1113]:
+            - listitem [ref=e1114]:
+              - generic [ref=e1120] [cursor=pointer]:
+                - heading "EDUCATION" [level=3] [ref=e1121]
+                - link "Save on a new Mac, iPad and Apple Watch with education pricing. Footnote ± - (opens in new window)" [ref=e1123]:
+                  - /url: /in/shop/education-pricing
+                  - text: Save on a new Mac, iPad and Apple Watch with education pricing.
+                  - superscript [ref=e1125]:
+                    - generic: Footnote
+                    - text: ±
+                  - generic: "- (opens in new window)"
+          - generic:
+            - button "Previous -" [disabled]:
+              - generic:
+                - img
+              - generic: Previous -
+            - button "Next -" [disabled]:
+              - generic:
+                - img
+              - generic: Next -
+      - generic [ref=e1126]:
+        - heading "Quick Links" [level=2] [ref=e1127]
+        - navigation "Quick Links" [ref=e1129]:
+          - list [ref=e1130]:
+            - listitem [ref=e1131]:
+              - link "Find a Store (opens in new window)" [ref=e1132] [cursor=pointer]:
+                - /url: https://www.apple.com/in/retail
+                - text: Find a Store
+                - generic [ref=e1133]: (opens in new window)
+            - listitem [ref=e1134]:
+              - link "Order Status (opens in new window)" [ref=e1135] [cursor=pointer]:
+                - /url: https://secure.store.apple.com/in/shop/order/list
+                - text: Order Status
+                - generic [ref=e1136]: (opens in new window)
+            - listitem [ref=e1137]:
+              - link "Shopping Help (opens in new window)" [ref=e1138] [cursor=pointer]:
+                - /url: /in/shop/help
+                - text: Shopping Help
+                - generic [ref=e1139]: (opens in new window)
+            - listitem [ref=e1140]:
+              - link "Your Saves (opens in new window)" [ref=e1141] [cursor=pointer]:
+                - /url: /in/shop/yoursaves
+                - text: Your Saves
+                - generic [ref=e1142]: (opens in new window)
+    - contentinfo "Footer" [ref=e1143]:
+      - generic [ref=e1144]:
+        - heading "Footer" [level=2] [ref=e1145]
+        - heading "footnotes" [level=3] [ref=e1146]
+        - generic [ref=e1147]:
+          - generic [ref=e1148]:
+            - list "Footnotes" [ref=e1151]:
+              - listitem [ref=e1152]:
+                - generic [ref=e1153]: Footnote
+                - generic [ref=e1154]:
+                  - text: ◊ No Cost EMI is available with the purchase of an eligible product made using qualifying cards on 3- or 6-month tenures from most leading card issuers. Monthly pricing is rounded to the nearest rupee. Exact pricing will be provided by your card issuer, subject to your card issuer’s terms and conditions. Minimum order spend applies as per your card issuer’s threshold. No Cost EMI is not available to Business customers and cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Card eligibility is subject to terms and conditions between you and your card issuer. Offer may be revised or withdrawn at any time without any prior notice.
+                  - link "Terms apply (opens in new window)" [ref=e1155] [cursor=pointer]:
+                    - /url: /in/shop/browse/financing/terms
+                    - text: Terms apply
+                    - generic [ref=e1156]: (opens in new window)
+                  - text: .
+              - listitem [ref=e1157]:
+                - generic [ref=e1158]: Footnote
+                - generic [ref=e1159]:
+                  - text: ∆ Instant cashback is available with the purchase of an eligible product with qualifying American Express, Axis Bank and ICICI Bank cards only. Minimum transaction value of ₹10001.00 applies. Learn more about instant cashback amounts and eligible devices. Instant cashback is available for up to two orders per rolling 90-day period with an eligible card. Card eligibility is subject to terms and conditions between you and your card issuer. Total transaction value is calculated after any trade-in credit or eligible discount is applied. Any subsequent order adjustment(s) or cancellation(s) may result in instant cashback being recalculated, and any refund may be adjusted to account for instant cashback clawback; this may result in no refund being made to you. Offer may be revised or withdrawn at any time without any prior notice.
+                  - link "Additional terms apply. (opens in new window)" [ref=e1160] [cursor=pointer]:
+                    - /url: /in/shop/browse/financing/terms
+                    - text: Additional terms apply.
+                    - generic [ref=e1161]: (opens in new window)
+                  - text: Instant cashback is not available to Business customers and cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Multiple separate orders cannot be combined for instant cashback.
+              - listitem [ref=e1162]:
+                - generic [ref=e1163]: Footnote
+                - generic [ref=e1164]:
+                  - text: ± Available to current and newly accepted college students, parents buying for college students, and teachers and staff at all levels. See
+                  - link "Terms" [ref=e1165] [cursor=pointer]:
+                    - /url: https://www.apple.com/in-edu/shop/browse/open/salespolicies/edu
+                  - text: for more information.
+              - listitem [ref=e1166]:
+                - generic [ref=e1167]: Footnote
+                - text: † Listed pricing is Maximum Retail Price (inclusive of all taxes).
+              - listitem [ref=e1168]:
+                - generic [ref=e1169]: Footnote
+                - text: ‡ Mac, iPad and Apple Watch trade-in is available only in-store in India. Apple Retail Online in India does not offer trade-in for Mac, iPad and Apple Watch. Trade‑in values will vary based on the condition, year and configuration of your eligible trade‑in device. Not all devices are eligible for credit. You must be at least the age of majority to be eligible to trade in for credit. Trade‑in value may be applied towards a qualifying new device purchase. Actual value awarded is based on receipt of a qualifying device matching the description provided when estimate was made. Sales tax may be assessed on full value of a new device purchase. In-store trade‑in requires presentation of a valid photo ID (local law may require saving this information). Some stores may have additional requirements. Apple or its trade‑in partners reserve the right to refuse, cancel or limit the quantity of any trade‑in transaction for any reason. More details are available from Apple’s trade‑in partner for trade‑in and recycling of eligible devices. Restrictions and limitations may apply.
+              - listitem [ref=e1170]:
+                - generic [ref=e1171]: Footnote
+                - generic [ref=e1172]:
+                  - text: ※ New subscribers only. ₹119.00/month after trial. Offer is available for new Apple Music subscribers with a new eligible device for a limited time only. Offer redemption for eligible audio devices requires connecting or pairing to an Apple device running the latest iOS or iPadOS. Offer redemption for Apple Watch requires connecting or pairing to an iPhone running the latest iOS. Offer good for three months after eligible device activation. Only one offer per Apple Account, regardless of the number of eligible devices you purchase. Plan automatically renews until cancelled. Restrictions and other
+                  - link "offer terms (opens in new window)" [ref=e1173] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/promo
+                    - generic [ref=e1174]: offer
+                    - text: terms
+                    - generic [ref=e1175]: (opens in new window)
+                  - text: apply.
+              - listitem [ref=e1176]:
+                - generic [ref=e1177]: Footnote
+                - text: ¶ Monthly pricing is after purchase using EMI with qualifying cards at 15.99% p.a. over a 6‑month tenure. Monthly pricing is rounded to the nearest rupee. Exact pricing will be provided by your card issuer, subject to your card issuer’s terms and conditions.
+              - listitem [ref=e1178]:
+                - generic [ref=e1179]: Footnote
+                - generic [ref=e1180]: "1."
+                - generic [ref=e1181]: Special pricing available to qualified customers. To learn more about how to start qualifying for special pricing, talk to an Apple Specialist in a store or give us a call on 000800 040 1966.
+              - listitem [ref=e1182]:
+                - generic [ref=e1183]: Footnote
+                - generic [ref=e1184]: "2."
+                - generic [ref=e1185]:
+                  - text: Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see
+                  - link "support.apple.com/121115 (opens in new window)" [ref=e1186] [cursor=pointer]:
+                    - /url: https://support.apple.com/en-in/121115
+                    - text: support.apple.com/121115
+                    - generic [ref=e1187]: (opens in new window)
+                  - text: .
+            - img
+            - img
+          - paragraph [ref=e1188]: We use your location to show you delivery options faster. We found your location using your IP address or because you entered it during a previous visit to Apple.
+        - navigation "Breadcrumbs" [ref=e1189]:
+          - link "Apple" [ref=e1190] [cursor=pointer]:
+            - /url: https://www.apple.com/in/
+            - generic [ref=e1192]: Apple
+          - generic [ref=e1193]:
+            - list:
+              - listitem [ref=e1194]: Apple Store Online
+        - navigation "More Apple Store Links" [ref=e1195]:
+          - generic [ref=e1196]:
+            - generic:
+              - heading "Shop and Learn" [level=3]:
+                - generic: Shop and Learn
+              - list:
+                - listitem [ref=e1197]:
+                  - link "Store" [ref=e1198] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/shop/goto/store
+                - listitem [ref=e1199]:
+                  - link "Mac" [ref=e1200] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/mac/
+                - listitem [ref=e1201]:
+                  - link "iPad" [ref=e1202] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/ipad/
+                - listitem [ref=e1203]:
+                  - link "iPhone" [ref=e1204] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/iphone/
+                - listitem [ref=e1205]:
+                  - link "Watch" [ref=e1206] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/watch/
+                - listitem [ref=e1207]:
+                  - link "AirPods" [ref=e1208] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/airpods/
+                - listitem [ref=e1209]:
+                  - link "TV & Home" [ref=e1210] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/tv/
+                - listitem [ref=e1211]:
+                  - link "AirTag" [ref=e1212] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/airtag/
+                - listitem [ref=e1213]:
+                  - link "Accessories" [ref=e1214] [cursor=pointer]:
+                    - /url: /in/shop/accessories/all
+                - listitem [ref=e1215]:
+                  - link "Gift Cards" [ref=e1216] [cursor=pointer]:
+                    - /url: /in/shop/gift-cards
+            - generic:
+              - heading "Apple Wallet" [level=3]:
+                - generic: Apple Wallet
+              - list:
+                - listitem [ref=e1217]:
+                  - link "Wallet" [ref=e1218] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/wallet/
+          - generic [ref=e1219]:
+            - generic:
+              - heading "Account" [level=3]:
+                - generic: Account
+              - list:
+                - listitem [ref=e1220]:
+                  - link "Manage Your Apple Account" [ref=e1221] [cursor=pointer]:
+                    - /url: https://appleid.apple.com/
+                - listitem [ref=e1222]:
+                  - link "Apple Store Account" [ref=e1223] [cursor=pointer]:
+                    - /url: https://secure.store.apple.com/in/shop/account/home
+                - listitem [ref=e1224]:
+                  - link "iCloud.com" [ref=e1225] [cursor=pointer]:
+                    - /url: https://www.icloud.com
+            - generic:
+              - heading "Entertainment" [level=3]:
+                - generic: Entertainment
+              - list:
+                - listitem [ref=e1226]:
+                  - link "Apple One" [ref=e1227] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/apple-one/
+                - listitem [ref=e1228]:
+                  - link "Apple TV" [ref=e1229] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/apple-tv-plus/
+                - listitem [ref=e1230]:
+                  - link "Apple Music" [ref=e1231] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/apple-music/
+                - listitem [ref=e1232]:
+                  - link "Apple Arcade" [ref=e1233] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/apple-arcade/
+                - listitem [ref=e1234]:
+                  - link "Apple Podcasts" [ref=e1235] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/apple-podcasts/
+                - listitem [ref=e1236]:
+                  - link "Apple Books" [ref=e1237] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/apple-books/
+                - listitem [ref=e1238]:
+                  - link "App Store" [ref=e1239] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/app-store/
+          - generic [ref=e1240]:
+            - generic:
+              - heading "Apple Store" [level=3]:
+                - generic: Apple Store
+              - list:
+                - listitem [ref=e1241]:
+                  - link "Find a Store" [ref=e1242] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/retail/
+                - listitem [ref=e1243]:
+                  - link "Genius Bar" [ref=e1244] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/retail/geniusbar/
+                - listitem [ref=e1245]:
+                  - link "Today at Apple" [ref=e1246] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/today/
+                - listitem [ref=e1247]:
+                  - link "Apple Summer Camp" [ref=e1248] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/today/camp/
+                - listitem [ref=e1249]:
+                  - link "Ways to Buy" [ref=e1250] [cursor=pointer]:
+                    - /url: /in/shop/ways-to-buy
+                - listitem [ref=e1251]:
+                  - link "Apple Trade In" [ref=e1252] [cursor=pointer]:
+                    - /url: /in/shop/trade-in
+                - listitem [ref=e1253]:
+                  - link "Recycling Programme" [ref=e1254] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/recycling/
+                - listitem [ref=e1255]:
+                  - link "Order Status" [ref=e1256] [cursor=pointer]:
+                    - /url: https://secure.store.apple.com/in/shop/order/list
+                - listitem [ref=e1257]:
+                  - link "Shopping Help" [ref=e1258] [cursor=pointer]:
+                    - /url: /in/shop/help
+          - generic [ref=e1259]:
+            - generic:
+              - heading "For Business" [level=3]:
+                - generic: For Business
+              - list:
+                - listitem [ref=e1260]:
+                  - link "Apple and Business" [ref=e1261] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/business/
+            - generic:
+              - heading "For Education" [level=3]:
+                - generic: For Education
+              - list:
+                - listitem [ref=e1262]:
+                  - link "Apple and Education" [ref=e1263] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/education/
+                - listitem [ref=e1264]:
+                  - link "Shop for Education" [ref=e1265] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/education/k12/how-to-buy/
+                - listitem [ref=e1266]:
+                  - link "Shop for College" [ref=e1267] [cursor=pointer]:
+                    - /url: /in/shop/browse/home/education_routing
+            - generic:
+              - heading "For Healthcare" [level=3]:
+                - generic: For Healthcare
+              - list:
+                - listitem [ref=e1268]:
+                  - link "Apple in Healthcare" [ref=e1269] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/healthcare/
+                - listitem [ref=e1270]:
+                  - link "Health on Apple Watch" [ref=e1271] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/healthcare/apple-watch/
+          - generic [ref=e1272]:
+            - generic:
+              - heading "Apple Values" [level=3]:
+                - generic: Apple Values
+              - list:
+                - listitem [ref=e1273]:
+                  - link "Accessibility" [ref=e1274] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/accessibility/
+                - listitem [ref=e1275]:
+                  - link "Environment" [ref=e1276] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/environment/
+                - listitem [ref=e1277]:
+                  - link "Privacy" [ref=e1278] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/privacy/
+                - listitem [ref=e1279]:
+                  - link "Supply Chain" [ref=e1280] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/supply-chain/
+            - generic:
+              - heading "About Apple" [level=3]:
+                - generic: About Apple
+              - list:
+                - listitem [ref=e1281]:
+                  - link "Newsroom" [ref=e1282] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/newsroom/
+                - listitem [ref=e1283]:
+                  - link "Apple Leadership" [ref=e1284] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/leadership/
+                - listitem [ref=e1285]:
+                  - link "Career Opportunities" [ref=e1286] [cursor=pointer]:
+                    - /url: https://www.apple.com/jobs/in/
+                - listitem [ref=e1287]:
+                  - link "Investors" [ref=e1288] [cursor=pointer]:
+                    - /url: https://investor.apple.com
+                - listitem [ref=e1289]:
+                  - link "Ethics & Compliance" [ref=e1290] [cursor=pointer]:
+                    - /url: https://www.apple.com/compliance
+                - listitem [ref=e1291]:
+                  - link "Events" [ref=e1292] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/apple-events/
+                - listitem [ref=e1293]:
+                  - link "Contact Apple" [ref=e1294] [cursor=pointer]:
+                    - /url: https://www.apple.com/in/contact/
+        - generic [ref=e1295]:
+          - paragraph [ref=e1297]:
+            - text: "More ways to shop:"
+            - link "Find an Apple Store" [ref=e1299] [cursor=pointer]:
+              - /url: https://www.apple.com/in/retail
+            - text: or
+            - link "other retailer" [ref=e1300] [cursor=pointer]:
+              - /url: https://locate.apple.com
+            - text: near you. Or call
+            - generic [ref=e1301]: 000800 040 1966
+            - text: .
+          - link "India" [ref=e1303] [cursor=pointer]:
+            - /url: https://www.apple.com/choose-your-country
+          - generic [ref=e1304]:
+            - generic [ref=e1305]: Copyright © 2026 Apple Inc. All rights reserved.
+            - list [ref=e1306]:
+              - listitem [ref=e1307]:
+                - link "Privacy Policy" [ref=e1308] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/privacy/privacy-policy
+              - listitem [ref=e1309]:
+                - link "Terms of Use" [ref=e1310] [cursor=pointer]:
+                  - /url: http://www.apple.com/legal/internet-services/terms/site.html
+              - listitem [ref=e1311]:
+                - link "Sales Policy" [ref=e1312] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/legal/sales-support
+              - listitem [ref=e1313]:
+                - link "Legal" [ref=e1314] [cursor=pointer]:
+                  - /url: https://www.apple.com/in/legal
+              - listitem [ref=e1315]:
+                - link "Site Map" [ref=e1316] [cursor=pointer]:
+                  - /url: /in/shop/browse/sitemap
+  - generic:
+    - status [ref=e1317]
+    - status [ref=e1318]
+    - status [ref=e1319]
+    - status [ref=e1320]
+    - status [ref=e1321]
+    - status [ref=e1322]
+    - status [ref=e1323]
+    - status [ref=e1324]
+    - status [ref=e1325]
+    - status [ref=e1326]
+    - status [ref=e1327]
+```
+
+# Test source
+
+```ts
+  1  | import {test, expect} from "@playwright/test";
+  2  | 
+  3  | test.skip("Skip annotation", async ({page})=>{
+  4  | 
+  5  |     //skip annotation
+  6  |     await page.goto('https://www.gsrtc.in/site/');
+  7  |     await page.getByRole('button', { name: 'Close' }).click();
+  8  |     await page.locator('#singleLadyA').check();
+  9  |     await expect(page.locator('#singleLadyA')).toBeChecked();
+  10 |     await page.locator('#singleLadyA').uncheck();
+  11 |     await expect(page.locator('#singleLadyA')).not.toBeChecked();
+  12 | });
+  13 | 
+  14 | 
+  15 | test.describe.skip('Skip all tests in this block', () => {
+  16 | 
+  17 |     //only annotation
+  18 |     // test.only('Only annotation', async ({ page }) => {
+  19 | 
+  20 |     // await page.goto('https://www.air.irctc.co.in/');
+  21 | 
+  22 |     // const departureField = page.getByRole('textbox', { name: 'Departure' });
+  23 |     // const returnField = page.getByRole('textbox', { name: 'Return' });
+  24 | 
+  25 |     // await departureField.click();
+  26 |     // await page.getByText('10', { exact: true }).click();
+  27 |     
+  28 |     // await returnField.click();
+  29 |     // await page.getByRole('cell', { name: '17' }).click();
+  30 | 
+  31 |     // const departureValue = await departureField.inputValue();
+  32 |     // const returnValue = await returnField.inputValue();
+  33 | 
+  34 |     // console.log('Departure:', departureValue);
+  35 |     // console.log('Return:', returnValue);
+  36 | 
+  37 |     // await expect(departureField).toHaveValue(/10/);
+  38 |     // await expect(returnField).toHaveValue(/17/);
+  39 | 
+  40 |     // });
+  41 | 
+  42 |     //fix me annotation
+  43 |     test.fixme('Fix Me annotation', async ({ page }) => {
+  44 | 
+  45 |     await page.goto("https://www.makemytrip.com/flights/",{timeout:90000});
+  46 |     await page.locator('.commonModal__close').click();
+  47 |     await page.getByText('Round Trip').click();
+  48 |     await expect(page.getByText('Round Trip')).toHaveClass(/selected/);
+  49 |     });
+  50 | 
+  51 | });
+  52 | 
+  53 | //to do the filtering by tag and run this test we can use npx playwright test Day9Practice.spec.ts --grep @smoke
+  54 | 
+  55 | test("Slow annotation @regression", async ({page,browserName})=>{
+  56 | 
+  57 |     //slow annotation
+  58 |     test.slow(browserName === 'chromium');
+  59 |     await page.goto("https://www.air.irctc.co.in/");
+  60 |     await page.waitForLoadState("networkidle");
+  61 |     await page.getByLabel("Senior Citizen ").check();
+  62 |     await expect(page.getByLabel("Senior Citizen ")).toBeChecked();
+  63 |     await page.getByLabel("Senior Citizen ").uncheck();
+  64 |     await expect(page.getByLabel("Senior Citizen")).not.toBeChecked();
+  65 | });
+  66 | 
+  67 | test.fail("Fail annotation", async ({page})=>{
+  68 | 
+  69 |     //fail annotation
+  70 |     await page.goto("https://www.apple.com/in/store",{timeout: 60000});
+  71 |     await page.waitForLoadState("networkidle");
+  72 |     await expect(page).toHaveURL('https://www.apple.com/in/store');
+  73 |     await expect(page).toHaveTitle("Apple Store Online - Apple (IN)");
+  74 |     await expect(page).not.toHaveTitle('Store');
+  75 |     await expect(page.locator("//h1[text()='Store']")).toBeVisible();
+  76 |     await expect(page.getByRole('main')).toContainText('The best way to buy the products you love.');
+  77 |     await expect(page.getByRole('heading', { name: 'The latest.' })).toBeVisible();
+  78 |     await expect(page.getByLabel('iPhone', { exact: true })).toContainText('iPhone');
+> 79 |     await expect(page.locator("rf-ccard-img-full")).toHaveCount(5);
+     |                                                     ^ Error: expect(locator).toHaveCount(expected) failed
+  80 | });
+  81 | 
+  82 | //to do the filtering by tag and run this test we can use npx playwright test Day9Practice.spec.ts --grep @smoke
+  83 | 
+  84 | test("Tags @smoke ",async ({page})=>{
+  85 |  
+  86 |     await page.goto("https://shop.unicornstore.in/",{timeout : 60000});
+  87 |     await page.waitForLoadState("networkidle");
+  88 |     await expect(page).toHaveURL('https://shop.unicornstore.in/');
+  89 |     await expect(page.getByAltText("logo", {exact:true})).toBeVisible({timeout:20000});
+  90 |     await expect(page.locator("//a[@routerlink='/deals-of-day']")).toBeVisible({timeout:30000});
+  91 |     await expect(page.getByRole('button', { name: ' Search' })).toBeVisible();
+  92 |     await expect(page.getByRole('button', { name: ' Search' })).toBeEnabled();
+  93 |     await expect(page.getByRole('button', { name: '' })).toBeVisible();
+  94 |     await expect(page.getByRole('button', { name: '' })).toBeEnabled();
+  95 |     await expect(page.getByRole('navigation')).toContainText('Shop');
+  96 |     await expect(page.getByRole('navigation')).toContainText('Student Offers');
+  97 | 
+  98 | });
+  99 | 
+```

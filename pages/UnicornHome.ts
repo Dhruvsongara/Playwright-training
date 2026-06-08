@@ -7,11 +7,21 @@ export class UnicornHome {
     productSearch: Locator;
     searchBar: Locator;
     searchtextbox: Locator;
+    loginLink: Locator;
+    emailField: Locator;
+    passwordField: Locator;
+    loginButton: Locator;
+    loginVerify: Locator;
 
     constructor( page:Page){
         
         this.page = page;
         this.dealsCheck = page.locator("//a[@routerlink='/deals-of-day']");
+        this.loginLink = page.locator("//a[text()='Login']");
+        this.emailField = page.locator("#email");
+        this.passwordField = page.locator("#password");
+        this.loginButton = page.getByRole("button", {name: 'Login',exact: true});
+        this.loginVerify = page.locator('p-toastitem');
         this.productSearch = page.getByRole('button', { name: ' Search' });
         this.searchBar = page.locator("//input[@id='searchbar']"); 
         this.searchtextbox = page.getByRole('textbox', { name: 'I\'m Looking For' });
@@ -23,6 +33,17 @@ export class UnicornHome {
 
     async pageCheck(){
         await expect(this.dealsCheck).toBeVisible();
+    }
+
+    async login(){
+
+        await this.loginLink.click();
+        await this.emailField.click();
+        await this.emailField.fill('shrikeelabs.business@gmail.com');
+        await this.passwordField.click();
+        await this.passwordField.fill('Dhaval@123');
+        await this.loginButton.click();
+        await expect(this.loginVerify).toContainText('Login successful');
     }
 
     async searchProduct(productName : string):Promise<void> {

@@ -1,6 +1,6 @@
 import {Page, Locator, expect} from "@playwright/test";
 
-export class productInfoPage{
+export class IphoneInfoPage{
 
     page: Page;
     verificationLink: Locator;

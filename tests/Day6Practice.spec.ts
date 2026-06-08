@@ -36,12 +36,12 @@ test("assertions", async ({page})=>{
 //     await expect(page.locator("//h1[text()='Store']")).toBeVisible();
 // });
 
-//to see the trace of the aboce test case we can use the npx playwright show-trace trace.zip
+//to see the trace of the above test case we can use the npx playwright show-trace trace.zip
  
 test("different waitings",async ({page})=>{
  
     await page.goto("https://shop.unicornstore.in/",{timeout : 60000});
-     await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("networkidle");
     await expect(page).toHaveURL('https://shop.unicornstore.in/');
     await expect(page.getByAltText("logo", {exact:true})).toBeVisible({timeout:20000});
     await expect(page.locator("//a[@routerlink='/deals-of-day']")).toBeVisible({timeout:30000});

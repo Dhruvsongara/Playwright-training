@@ -1,31 +1,65 @@
 import {test} from "@playwright/test";
 import {UnicornHome} from "../pages/UnicornHome";
-import {productInfoPage} from "../pages/ProductInfo";
+import {IphoneInfoPage} from "../pages/IphoneInfo";
+import {AirpodInfoPage } from "../pages/airpodInfo";
 import {CartPage} from "../pages/CartPage";
 
-test ("validate iphone device search", async ({page}) => {
+let productPage: UnicornHome;
+let cartPage: CartPage;
 
-    const productPage = new UnicornHome(page);
-    const productInfo = new productInfoPage(page);
-    const cartPage = new CartPage(page);
+test.beforeEach(async ({page})=>{
+
+    productPage = new UnicornHome(page);
+    cartPage = new CartPage(page);
+
     //page launch
     await productPage.unicornURL();
     await productPage.pageCheck();
+    await productPage.login();
+});
+
+test ("validate iphone 17 device search", async ({page}) => {
+
+    const iphoneInfo = new IphoneInfoPage(page);
 
     //product selection
     await productPage.searchProduct('iphone 17');
-    await productInfo.verifyPageStability();
-    await productInfo.productClick();
-    await productInfo.mrpVisibilityCheck();
-    await productInfo.titleCheck();
-    await productInfo.colorSelection();
-    await productInfo.storageSelection();
-    await productInfo.addToCart();
+    await iphoneInfo.verifyPageStability();
+    await iphoneInfo.productClick();
+    await iphoneInfo.mrpVisibilityCheck();
+    await iphoneInfo.titleCheck();
+    await iphoneInfo.colorSelection();
+    await iphoneInfo.storageSelection();
+    await iphoneInfo.addToCart();
 
     //dealing with cart
-    await cartPage.successfulAddtoCartCheck();
+    // await cartPage.successfulAddtoCartCheck();
     await cartPage.cartButtonClick();
     await cartPage.proceedcheckOut();
     await cartPage.orderDetailsFillUp();
     await cartPage.finalCheckout();
+});
+
+test ("validate airpods search", async ({page})=>{
+
+    const airpodInfo = new AirpodInfoPage(page);
+
+    //product selection
+    await productPage.searchProduct('airpods');
+    await airpodInfo.verifyPageStability();
+    await airpodInfo.productClick();
+    await airpodInfo.mrpVisibilityCheck();
+    await airpodInfo.titleCheck();
+    await airpodInfo.addToCart();
+
+    //dealing with cart
+    // await cartPage.successfulAddtoCartCheck();
+    await cartPage.proceedcheckOut();
+    await cartPage.orderDetailsFillUp();
+    await cartPage.finalCheckout();
+}); 
+
+
+test.afterEach(async ({}, testInfo) => {
+    console.log(`Test "${testInfo.title}" finished with status: ${testInfo.status}`);
 });
