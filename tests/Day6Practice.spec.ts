@@ -55,5 +55,6 @@ test("different waitings",async ({page})=>{
 });
 
 
+
 //to run the test case multiple times we can define this npx playwright test --repeat-each=3 in the terminal
 

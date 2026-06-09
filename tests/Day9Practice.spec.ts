@@ -101,5 +101,4 @@ test("Tags @smoke ",async ({page})=>{
     await expect(page.getByRole('button', { name: '' })).toBeEnabled();
     await expect(page.getByRole('navigation')).toContainText('Shop');
     await expect(page.getByRole('navigation')).toContainText('Student Offers');
-
 });

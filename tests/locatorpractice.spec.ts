@@ -31,4 +31,5 @@ test("locatorpractice", async ({page})=>{
     // await page.locator(".submit-btn").click();
     await page.locator("//button[text()='Submit']").first().click();
     await page.pause();
+    
 });

@@ -10,7 +10,6 @@ test("popup handling", async ({page})=>{
     await page.locator("#btn-simple-alert").click();
     await expect(page.getByTestId("alert-output")).toContainText("Simple alert was accepted");
 
-
     //confirmation alert accept
     page.once("dialog",async dialog =>{
         await dialog.accept();

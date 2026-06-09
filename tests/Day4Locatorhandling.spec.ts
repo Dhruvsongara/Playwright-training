@@ -26,7 +26,6 @@ test("Dropdown Handling", async ({page})=>{
 //     await expect(page.getByLabel("Senior Citizen")).not.toBeChecked();
 // });
 
-
 test('checkbox', async ({ page }) => {
 
   //checkbox
