@@ -38,5 +38,4 @@ export class AirpodInfoPage{
     async addToCart(){
         await this.cartButton.click();
     }
-
 }

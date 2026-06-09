@@ -1,0 +1,20 @@
+{
+    "login":{
+        "email":"shrikeelabs.business@gmail.com",
+        "password":"Dhaval@123"
+    },
+    "searchItems":{
+        "mobile":"iphone 17",
+        "earbuds":"airpods"
+    },
+    "orderDetails":{
+        "firstname":"Dhruv",
+        "lastname":"Songara",
+        "email":"dhruv123@gmail.com",
+        "mobile":"9999999999",
+        "address":"Himatnagar",
+        "city":"Himatnagar",
+        "pincode":"383001",
+        "stateOption":"1485"
+    }
+}

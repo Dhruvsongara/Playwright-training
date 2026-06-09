@@ -35,18 +35,21 @@ export class UnicornHome {
         await expect(this.dealsCheck).toBeVisible();
     }
 
-    async login(){
+    async login(email:string, password:string):Promise<void> {
 
         await this.loginLink.click();
         await this.emailField.click();
-        await this.emailField.fill('shrikeelabs.business@gmail.com');
+        await this.emailField.fill(email);
+        // await this.emailField.fill('shrikeelabs.business@gmail.com');
         await this.passwordField.click();
-        await this.passwordField.fill('Dhaval@123');
+        await this.passwordField.fill(password);
+        // await this.passwordField.fill('Dhaval@123');
         await this.loginButton.click();
         await expect(this.loginVerify).toContainText('Login successful');
     }
 
     async searchProduct(productName : string):Promise<void> {
+        await expect(this.productSearch).toBeVisible();
         await this.productSearch.click();
         await this.searchBar.click();
         await this.searchtextbox.fill(productName);

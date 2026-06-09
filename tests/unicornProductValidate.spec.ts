@@ -3,6 +3,7 @@ import {UnicornHome} from "../pages/UnicornHome";
 import {IphoneInfoPage} from "../pages/IphoneInfo";
 import {AirpodInfoPage } from "../pages/airpodInfo";
 import {CartPage} from "../pages/CartPage";
+import dataFile from "../test-data/dataFile.json"
 
 let productPage: UnicornHome;
 let cartPage: CartPage;
@@ -15,7 +16,7 @@ test.beforeEach(async ({page})=>{
     //page launch
     await productPage.unicornURL();
     await productPage.pageCheck();
-    await productPage.login();
+    await productPage.login(dataFile.login.email,dataFile.login.password);
 });
 
 test ("validate iphone 17 device search", async ({page}) => {
@@ -23,7 +24,8 @@ test ("validate iphone 17 device search", async ({page}) => {
     const iphoneInfo = new IphoneInfoPage(page);
 
     //product selection
-    await productPage.searchProduct('iphone 17');
+    // await productPage.searchProduct('iphone 17');
+    await productPage.searchProduct(dataFile.searchItems.mobile);
     await iphoneInfo.verifyPageStability();
     await iphoneInfo.productClick();
     await iphoneInfo.mrpVisibilityCheck();
@@ -36,7 +38,7 @@ test ("validate iphone 17 device search", async ({page}) => {
     // await cartPage.successfulAddtoCartCheck();
     await cartPage.cartButtonClick();
     await cartPage.proceedcheckOut();
-    await cartPage.orderDetailsFillUp();
+    await cartPage.orderDetailsFillUp(dataFile.orderDetails.firstname, dataFile.orderDetails.lastname, dataFile.orderDetails.email, dataFile.orderDetails.mobile, dataFile.orderDetails.address, dataFile.orderDetails.city, dataFile.orderDetails.pincode, dataFile.orderDetails.stateOption);
     await cartPage.finalCheckout();
 });
 
@@ -45,7 +47,8 @@ test ("validate airpods search", async ({page})=>{
     const airpodInfo = new AirpodInfoPage(page);
 
     //product selection
-    await productPage.searchProduct('airpods');
+    // await productPage.searchProduct('airpods');
+    await productPage.searchProduct(dataFile.searchItems.earbuds);
     await airpodInfo.verifyPageStability();
     await airpodInfo.productClick();
     await airpodInfo.mrpVisibilityCheck();
@@ -55,7 +58,7 @@ test ("validate airpods search", async ({page})=>{
     //dealing with cart
     // await cartPage.successfulAddtoCartCheck();
     await cartPage.proceedcheckOut();
-    await cartPage.orderDetailsFillUp();
+    await cartPage.orderDetailsFillUp(dataFile.orderDetails.firstname, dataFile.orderDetails.lastname, dataFile.orderDetails.email, dataFile.orderDetails.mobile, dataFile.orderDetails.address, dataFile.orderDetails.city, dataFile.orderDetails.pincode, dataFile.orderDetails.stateOption);
     await cartPage.finalCheckout();
 }); 
 

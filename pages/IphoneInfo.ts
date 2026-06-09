@@ -51,5 +51,4 @@ export class IphoneInfoPage{
     async addToCart(){
         await this.cartButton.click();
     }
-
 }

@@ -65,23 +65,31 @@ export class CartPage{
         await this.checkOutButton.click();
     }
 
-    async orderDetailsFillUp(){
+    async orderDetailsFillUp(firstName:string, lastName:string, email:string, mobile:string, address:string, city:string, pincode:string, state:string):Promise<void>{
         await expect(this.orderPageVerify).toBeVisible();
         await this.firstNameTextbox.click();
-        await this.firstNameTextbox.fill('Dhruv');
+        // await this.firstNameTextbox.fill('Dhruv');
+        await this.firstNameTextbox.fill(firstName);
         await this.lastNameTextbox.click();
-        await this.lastNameTextbox.fill('Songara');
+        // await this.lastNameTextbox.fill('Songara');
+        await this.lastNameTextbox.fill(lastName);
         await this.emailTextbox.click();
-        await this.emailTextbox.fill('dhruv123@gmail.com');
+        // await this.emailTextbox.fill('dhruv123@gmail.com');
+        await this.emailTextbox.fill(email);
         await this.mobileTextbox.click();
-        await this.mobileTextbox.fill('9999999999');
+        // await this.mobileTextbox.fill('9999999999');
+        await this.mobileTextbox.fill(mobile);
         await this.addressTextbox.click();
-        await this.addressTextbox.fill('Himatnagar');
+        // await this.addressTextbox.fill('Himatnagar');
+        await this.addressTextbox.fill(address);
         await this.cityTextbox.click();
-        await this.cityTextbox.fill('Himatnagar');
+        // await this.cityTextbox.fill('Himatnagar');
+        await this.cityTextbox.fill(city);
         await this.pincodeTextbox.click();
-        await this.pincodeTextbox.fill('383001');
-        await this.stateDropdown.selectOption('1485');
+        // await this.pincodeTextbox.fill('383001');
+        await this.pincodeTextbox.fill(pincode);
+        // await this.stateDropdown.selectOption('1485');
+        await this.stateDropdown.selectOption(state);
         await this.continueButton.click();
     }
 
