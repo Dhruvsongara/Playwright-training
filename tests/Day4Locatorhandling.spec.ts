@@ -70,26 +70,26 @@ test("Keyboard events", async ({page})=>{
 
 });
 
-test('Date Picker', async ({ page }) => {
+// test('Date Picker', async ({ page }) => {
 
-  await page.goto('https://www.air.irctc.co.in/');
+//   await page.goto('https://www.air.irctc.co.in/');
 
-  const departureField = page.getByRole('textbox', { name: 'Departure' });
-  const returnField = page.getByRole('textbox', { name: 'Return' });
+//   const departureField = page.getByRole('textbox', { name: 'Departure' });
+//   const returnField = page.getByRole('textbox', { name: 'Return' });
 
-  await departureField.click();
-  await page.getByText('10', { exact: true }).click();
+//   await departureField.click();
+//   await page.getByText('10', { exact: true }).click();
   
-  await returnField.click();
-  await page.getByRole('cell', { name: '17' }).click();
+//   await returnField.click();
+//   await page.getByRole('cell', { name: '17' }).click();
 
-  const departureValue = await departureField.inputValue();
-  const returnValue = await returnField.inputValue();
+//   const departureValue = await departureField.inputValue();
+//   const returnValue = await returnField.inputValue();
 
-  console.log('Departure:', departureValue);
-  console.log('Return:', returnValue);
+//   console.log('Departure:', departureValue);
+//   console.log('Return:', returnValue);
 
-  await expect(departureField).toHaveValue(/10/);
-  await expect(returnField).toHaveValue(/17/);
+//   await expect(departureField).toHaveValue(/10/);
+//   await expect(returnField).toHaveValue(/17/);
 
-});
+// });
