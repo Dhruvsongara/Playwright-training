@@ -28,7 +28,7 @@ export class UnicornHome {
     }
 
     async unicornURL(){
-        await this.page.goto("https://shop.unicornstore.in/",{timeout:60000});
+        await this.page.goto("https://shop.unicornstore.in/",{timeout:90000});
     }
 
     async pageCheck(){
