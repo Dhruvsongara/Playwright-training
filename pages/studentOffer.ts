@@ -15,7 +15,8 @@ export class StudentOffer{
     imacContainer: Locator;
     optionsText: Locator;
     imacOptions: Locator;
-    m4chipOptions: Locator;
+    // optionsCount: Locator;
+    // m4chipOptions: Locator;
     m4chipLaptop: Locator;
     inStockText: Locator; 
     confirmBtn: Locator;
@@ -47,11 +48,16 @@ export class StudentOffer{
         this.productText = page.locator('fieldset');
         this.imacContainer = page.locator('.swiper-slide.ng-star-inserted.swiper-slide-active > .card > .card-body');
         this.optionsText = page.locator('fieldset');
+        this.imacOptions = page.getByRole('button', {name: 'dropdown trigger'});
+        // this.imacOptions = page.locator('p-dropdown');
+        // this.optionsCount = this.page.locator('.p-dropdown-item');
         // this.imacOptions = page.getByText('Select Your Options');
-        this.imacOptions = page.locator('p-dropdown');
         // this.m4chipOption = page.getByLabel('24-inch iMac with Retina 4.5K display: Apple M4 chip with 8‑core CPU and 8‑core GPU, 16GB, 256GB SSD - Silver', { exact: true }).getByText('24-inch iMac with Retina 4.5K');
-        this.m4chipOptions = page.locator('.p-dropdown-item');
-        this.m4chipLaptop = page.locator('.p-dropdown-item', { hasText: '24-inch iMac with Retina 4.5K display: Apple M4 chip with 8‑core CPU and 8‑core GPU, 16GB, 256GB SSD - Silver'});
+        // this.m4chipOptions = page.locator('.p-dropdown-item');
+        // this.m4chipOptions = page.getByRole('button', { name: 'dropdown trigger' });
+        // this.m4chipLaptop = page.locator('.p-dropdown-item', { hasText: '24-inch iMac with Retina 4.5K display: Apple M4 chip with 8‑core CPU and 8‑core GPU, 16GB, 256GB SSD - Silver'});
+
+        this.m4chipLaptop = page.getByRole('option', { name: '24-inch iMac with Retina 4.5K display: Apple M4 chip with 8‑core CPU and 8‑core GPU, 16GB, 256GB SSD - Silver', exact: true });
         this.inStockText = page.getByText('IN STOCK');
         this.confirmBtn = page.getByRole('dialog').getByRole('button', { name: 'Next', exact: true });
         this.instituteField = page.getByRole('textbox', { name: 'Institute Name*' });
@@ -87,17 +93,43 @@ export class StudentOffer{
         await this.nextBtn.click();
     }
 
-    async selectM4(){
+    // async selectM4(){
+
+    //     await expect(this.productText).toContainText('Select Your Product');
+    //     await this.imacContainer.click();
+    //     await expect(this.optionsText).toContainText('Choose Your Options');
+    //     await this.page.waitForLoadState("networkidle");
+    //     await this.imacOptions.click();
+    //     await this.m4chipOptions.first().waitFor();
+    //     await this.m4chipLaptop.click();
+    //     // await this.m4chipOption.click();
+    //     // await expect(this.inStockText).toBeVisible();
+    //     // await this.inStockText.click();
+    //     await this.confirmBtn.click();
+    // }
+
+    async selectM4Category() {
 
         await expect(this.productText).toContainText('Select Your Product');
-        await this.imacContainer.click();
+        // await this.imacContainer.click({force:true});
+        await this.imacContainer.dispatchEvent('click');
+        await this.page.waitForTimeout(5000);
+    }
+
+    async selectM4Laptop() {
+
         await expect(this.optionsText).toContainText('Choose Your Options');
-        await this.imacOptions.click();
-        await this.m4chipOptions.first().waitFor();
-        await this.m4chipLaptop.click();
-        // await this.m4chipOption.click();
-        // await expect(this.inStockText).toBeVisible();
-        // await this.inStockText.click();
+        // await this.page.scrollIntoViewIfNeeded();
+        await this.imacOptions.click({force:true,timeout:30000});
+        await expect(this.imacOptions)
+        .toHaveAttribute(
+            'aria-expanded',
+            'true'
+        );
+        // await console.log(this.optionsCount.count());
+        // await expect(this.m4chipLaptop).toBeVisible();
+        await this.m4chipLaptop.click({force:true,timeout:30000});
+        await expect(this.inStockText).toBeVisible();
         await this.confirmBtn.click();
     }
 

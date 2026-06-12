@@ -8,8 +8,10 @@ import dataFile from "../test-data/dataFile.json"
 
 let productPage: UnicornHome;
 let cartPage: CartPage;
-// let studentOffer: StudentOffer;
+let studentOffer: StudentOffer;
 
+
+// //flow while staying logged out
 // test.only("Student Offer flow (while staying logged out))",async ({page})=>{
 
 //     studentOffer = new StudentOffer(page);
@@ -20,10 +22,13 @@ let cartPage: CartPage;
 //     await productPage.pageCheck();
 //     await studentOffer.goToStudentSection();
 //     await studentOffer.chooseMac();
-//     await studentOffer.selectM4();
+//     await studentOffer.selectM4Category();
+//     await studentOffer.selectM4Laptop();
 //     await studentOffer.DetailsFillUp();
 // });
 
+
+//flow with logged in account
 test.describe("Logged-in User flows", () =>{
         
     test.beforeEach(async ({page})=>{
