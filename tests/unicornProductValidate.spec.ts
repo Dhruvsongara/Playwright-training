@@ -11,21 +11,21 @@ let cartPage: CartPage;
 let studentOffer: StudentOffer;
 
 
-// //flow while staying logged out
-// test.only("Student Offer flow (while staying logged out))",async ({page})=>{
+//flow while staying logged out
+test.only("Student Offer flow (while staying logged out))",async ({page})=>{
 
-//     studentOffer = new StudentOffer(page);
-//     productPage = new UnicornHome(page);
+    studentOffer = new StudentOffer(page);
+    productPage = new UnicornHome(page);
 
-//     //student offer flow 
-//     await productPage.unicornURL();
-//     await productPage.pageCheck();
-//     await studentOffer.goToStudentSection();
-//     await studentOffer.chooseMac();
-//     await studentOffer.selectM4Category();
-//     await studentOffer.selectM4Laptop();
-//     await studentOffer.DetailsFillUp();
-// });
+    //student offer flow 
+    await productPage.unicornURL();
+    await productPage.pageCheck();
+    await studentOffer.goToStudentSection();
+    await studentOffer.chooseMac();
+    await studentOffer.selectM4Category();
+    await studentOffer.selectM4Laptop();
+    await studentOffer.DetailsFillUp();
+});
 
 
 //flow with logged in account
