@@ -34,7 +34,7 @@ let studentOffer: StudentOffer;
 test.describe("Logged-in User flows", () =>{
  
     test.describe.configure({ mode: 'serial' });
- 
+
     //authentication
     test("authenticate", async ({ page }) => {
  
