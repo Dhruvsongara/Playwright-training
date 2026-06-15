@@ -134,7 +134,7 @@ test.describe("Logged-in User flows", () =>{
     });
 
     //logout from the account 
-    test("Logout from account", async ({page})=>{
+    test("Logout from account after all execution", async ({page})=>{
 
         const logout = new Logout(page);
         
