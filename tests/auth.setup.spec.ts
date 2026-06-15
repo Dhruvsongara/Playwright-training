@@ -13,8 +13,7 @@ test("authenticate", async ({ page }) => {
         dataFile.login.email,
         dataFile.login.password
     );
- 
     await page.context().storageState({
         path: "playwright/.auth/user.json"
     });
-}); 
+});  
