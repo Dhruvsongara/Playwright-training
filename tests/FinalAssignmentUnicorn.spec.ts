@@ -39,10 +39,18 @@ test.describe("Logged-in User flows", () =>{
     test("authenticate", async ({ page }) => {
  
         const productPage = new UnicornHome(page);
+        const logout = new Logout(page);
     
         await productPage.unicornURL();
         await productPage.pageCheck();
-    
+
+        // logout first if already logged in
+        if (await logout.logoutBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
+            console.log("User already logged in → logging out first");
+            await logout.logout();
+            await logout.verifyLogout();
+        }
+
         await productPage.login(
             dataFile.login.email,
             dataFile.login.password
