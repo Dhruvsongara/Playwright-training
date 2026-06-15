@@ -13,7 +13,8 @@ let cartPage: CartPage;
 let studentOffer: StudentOffer;
  
  
-// flow while staying logged out
+// flow while staying logged out 
+
 // test("Student Offer flow (while staying logged out))",async ({page})=>{
  
 //     studentOffer = new StudentOffer(page);
