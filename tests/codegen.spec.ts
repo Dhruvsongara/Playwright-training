@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('test @sanity', async ({ page }) => {
   await page.goto('https://www.rahulshettyacademy.com/client/#/auth/login');
   await page.getByRole('textbox', { name: 'email@example.com' }).click();
   await page.getByRole('textbox', { name: 'email@example.com' }).fill('dhruv123@gmail.com');

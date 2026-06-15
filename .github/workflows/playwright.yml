@@ -35,6 +35,19 @@ on:
     branches: [main, master]
   # workflow_dispatch:
 
+  workflow_dispatch:
+    inputs:
+      testType:
+        description: "Select test type"
+        required: true
+        default: "smoke"
+        type: choice
+        options:
+          - smoke
+          - sanity
+          - regression
+          - all
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -55,8 +68,17 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      
       - name: Run Playwright tests
-        run: npx playwright test
+        run: |
+          if [ "${{ github.event.inputs.testType }}" == "all" ] || [ -z "${{ github.event.inputs.testType }}" ]; then
+            npx playwright test
+          else
+            npx playwright test --grep "@${{ github.event.inputs.testType }}"
+          fi
+
+      # - name: Run Playwright tests
+      #   run: npx playwright test
 
       - name: Upload Playwright HTML report
         if: always()

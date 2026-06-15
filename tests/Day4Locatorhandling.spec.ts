@@ -1,6 +1,6 @@
 import {test, expect} from "@playwright/test";
 
-test("Dropdown Handling", async ({page})=>{
+test("Dropdown Handling @regression", async ({page})=>{
 
     // await page.goto("https://www.irctc.co.in/nget/train-search");
     // await page.locator("#journeyClass").click();
@@ -26,7 +26,7 @@ test("Dropdown Handling", async ({page})=>{
 //     await expect(page.getByLabel("Senior Citizen")).not.toBeChecked();
 // });
 
-test('checkbox', async ({ page }) => {
+test('checkbox @smoke', async ({ page }) => {
 
   //checkbox
   await page.goto('https://www.gsrtc.in/site/');
@@ -46,7 +46,7 @@ test('checkbox', async ({ page }) => {
 //   await expect(page.getByText('Round Trip')).toHaveClass(/selected/);
 // });
 
-test('Mouse events', async ({ page }) => {
+test('Mouse events @smoke', async ({ page }) => {
 
   await page.goto('https://qaplayground.vercel.app/');
   await page.getByTestId('btn-normal').click();
@@ -57,7 +57,7 @@ test('Mouse events', async ({ page }) => {
   await expect(page.getByTestId('btn-output')).toContainText('✓ Right-click (contextmenu) event detected!');
 });
 
-test("Keyboard events", async ({page})=>{
+test("Keyboard events @regression", async ({page})=>{
 
   await page.goto('https://shop.unicornstore.in/');
   await page.getByRole('button', { name: ' Search' }).click();

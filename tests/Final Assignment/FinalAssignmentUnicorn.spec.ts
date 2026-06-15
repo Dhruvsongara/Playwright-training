@@ -1,12 +1,12 @@
 import {test} from "@playwright/test";
-import {UnicornHome} from "../pages/UnicornHome";
-import {IphoneInfoPage} from "../pages/IphoneInfo";
-import {AirpodInfoPage } from "../pages/airpodInfo";
-import {CartPage} from "../pages/CartPage";
-import {StudentOffer} from "../pages/studentOffer";
-import { MacbookPage } from "../pages/MacbookPage";
-import { Logout } from "../pages/Logout";
-import dataFile from "../test-data/dataFile.json"
+import {UnicornHome} from "../../pages/UnicornHome";
+import {IphoneInfoPage} from "../../pages/IphoneInfo";
+import {AirpodInfoPage } from "../../pages/airpodInfo";
+import {CartPage} from "../../pages/CartPage";
+import {StudentOffer} from "../../pages/studentOffer";
+import { MacbookPage } from "../../pages/MacbookPage";
+import { Logout } from "../../pages/Logout";
+import dataFile from "../../test-data/dataFile.json"
 
 let productPage: UnicornHome;
 let cartPage: CartPage;
