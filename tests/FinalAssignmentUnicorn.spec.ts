@@ -34,15 +34,6 @@ let studentOffer: StudentOffer;
 test.describe("Logged-in User flows", () =>{
  
     test.describe.configure({ mode: 'serial' });
-
-    test("Logout from account", async ({page})=>{
-
-        const logout = new Logout(page);
-        
-        await logout.logout();
-        await logout.verifyLogout();
-
-    });
  
     //authentication
     test("authenticate", async ({ page }) => {

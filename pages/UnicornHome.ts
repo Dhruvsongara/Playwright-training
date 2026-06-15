@@ -17,7 +17,8 @@ export class UnicornHome {
         
         this.page = page;
         this.dealsCheck = page.locator("//a[@routerlink='/deals-of-day']");
-        this.loginLink = page.locator("//a[text()='Login']");
+        // this.loginLink = page.locator("//a[text()='Login']");
+        this.loginLink = page.getByText('Login');
         this.emailField = page.locator("#email");
         this.passwordField = page.locator("#password");
         this.loginButton = page.getByRole("button", {name: 'Login',exact: true});
