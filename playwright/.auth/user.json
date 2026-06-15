@@ -1,0 +1,368 @@
+{
+  "cookies": [
+    {
+      "name": "taboola_session_id",
+      "value": "v2_b2e58a676b8cdb8d7597cd18500ab6e0_fdb5c333-7ad6-4159-9637-f69497248ea4-tuct112958fe_1781519230_1781519235_CNawjgYQmqt1GPz1yNbsMyACKAEwZziY0QpA348QSL7x1gNQqN0VWABgAGiWv6eipvStmlNwAYABAIgBAJABAA",
+      "domain": ".taboola.com",
+      "path": "/taboolaaccount-hammadtangodownin/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "X-AB",
+      "value": "7b3091cc693d4c7898e337fae97b42dd",
+      "domain": "sc-static.net",
+      "path": "/scevent.min.js",
+      "expires": 1781605630.681289,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CLID",
+      "value": "5818ca87df134aadb077574f8f3a1e76.20260615.20270615",
+      "domain": "www.clarity.ms",
+      "path": "/",
+      "expires": 1813055229.3789,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "zabUserId",
+      "value": "1781519229484zabu0.19994110656451147",
+      "domain": "shop.unicornstore.in",
+      "path": "/",
+      "expires": 1813055229,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "zscacdeba83cc594ee5ba567f2305d3430b",
+      "value": "1781519229514zsc0.30980691599533106",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1781521035,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "zft-sdc",
+      "value": "isef%3Dtrue-isfr%3Dtrue-source%3Ddirect",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1781548199,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "t_gid",
+      "value": "fdb5c333-7ad6-4159-9637-f69497248ea4-tuct112958fe",
+      "domain": ".taboola.com",
+      "path": "/",
+      "expires": 1813055236.366714,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "t_pt_gid",
+      "value": "fdb5c333-7ad6-4159-9637-f69497248ea4-tuct112958fe",
+      "domain": ".taboola.com",
+      "path": "/",
+      "expires": 1813055236.366778,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://unicornstore.in",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "_scid",
+      "value": "Yb0j6ZL024BVVP6fvB_YAmLC729pBETR",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1815647230,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "zfccn",
+      "value": "037e23dc-70eb-4cc0-93e7-48850f8cf642",
+      "domain": "pagesense-collect.zoho.in",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_clck",
+      "value": "1pu517g%5E2%5Eg6x%5E0%5E2357",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1813055231,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "zfccn",
+      "value": "bfec39b5-11db-4a16-9efa-72a1f3abbab9",
+      "domain": "pagesense-hb-collect.zoho.in",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.704032116.1781519234",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1816079237.404433,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sc_at",
+      "value": "v2|H4sIAAAAAAAA/0XHwQ2AMAwEwYos3TomMXSDLaUKiocfv5kNvntOq6IspLasTmvyJsVYHg+hi5UcnD6+/tQLvSctcUAAAAA=",
+      "domain": ".snapchat.com",
+      "path": "/",
+      "expires": 1815215234.833188,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "TapAd_TS",
+      "value": "1781519234564",
+      "domain": ".tapad.com",
+      "path": "/",
+      "expires": 1786703234.742822,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "TapAd_DID",
+      "value": "3d0df9ed-730f-4eff-9932-0835f9e4c29a",
+      "domain": ".tapad.com",
+      "path": "/",
+      "expires": 1786703234.742888,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "TapAd_3WAY_SYNCS",
+      "value": "",
+      "domain": ".tapad.com",
+      "path": "/",
+      "expires": 1786703234.742909,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_sctr",
+      "value": "1%7C1781461800000",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1815647234,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_0EBNN1B5RL",
+      "value": "GS2.1.s1781519233$o1$g1$t1781519235$j58$l0$h0",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1816079235.702887,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_scid_r",
+      "value": "aj0j6ZL024BVVP6fvB_YAmLC729pBETRdwflQQ",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1815647235,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUn76ul7Yrec6l4AQOTxW8XCA247TM3EigHlWqkS12jDL5kQiIvgoYKUjVqX",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1816079235.880268,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "zps-tgr-dts",
+      "value": "sc%3D1-expAppOnNewSession%3D%5B%5D-pc%3D2-sesst%3D1781519229515",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1813055229,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_clsk",
+      "value": "np852l%5E1781519236698%5E2%5E1%5El.clarity.ms%2Fcollect",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1781605636,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MUID",
+      "value": "007E9CE597A06DB11B8D8B9C96E46C89",
+      "domain": ".bing.com",
+      "path": "/",
+      "expires": 1815215236.800934,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1782124036.801018,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SRM_B",
+      "value": "007E9CE597A06DB11B8D8B9C96E46C89",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1815215236.801048,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_9EHTP9PLCZ",
+      "value": "GS2.1.s1781519233$o1$g1$t1781519236$j57$l0$h648192991",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1816079236.874334,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SM",
+      "value": "C",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "007E9CE597A06DB11B8D8B9C96E46C89",
+      "domain": ".clarity.ms",
+      "path": "/",
+      "expires": 1815215236.935428,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": 1782124036.935481,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ANONCHK",
+      "value": "0",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": 1781519836.935506,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.474610773.1781519228.2116586234.1781519237.1781519237",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1789295228,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_9EHTP9PNCZ",
+      "value": "GS2.1.s1781519237$o1$g0$t1781519237$j60$l0$h0",
+      "domain": ".unicornstore.in",
+      "path": "/",
+      "expires": 1816079237.403487,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://shop.unicornstore.in",
+      "localStorage": [
+        {
+          "name": "customer_token",
+          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoic2hyaWtlZWxhYnMuYnVzaW5lc3NAZ21haWwuY29tIiwiaWF0IjoxNzgxNTE5MjM4LCJleHAiOjE3ODQxMTEyMzh9.08yqy8X_7XrgTGmXS62ma5FmCQfO2YhEIICb7r2DQa0"
+        },
+        {
+          "name": "customer_data",
+          "value": "{\"id\":\"721614\",\"firstname\":\"Dhaval\",\"lastname\":\"rathod\",\"email\":\"shrikeelabs.business@gmail.com\",\"email_subscribe\":\"0\",\"phone\":\"9157483441\",\"company\":\"shrikee labs\",\"default_billing_address\":\"1\",\"default_shipping_address\":\"2\",\"ship_to_bill_address\":\"true\",\"gst\":null,\"gender\":null,\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoic2hyaWtlZWxhYnMuYnVzaW5lc3NAZ21haWwuY29tIiwiaWF0IjoxNzgxNTE5MjM4LCJleHAiOjE3ODQxMTEyMzh9.08yqy8X_7XrgTGmXS62ma5FmCQfO2YhEIICb7r2DQa0\",\"active\":\"1\"}"
+        },
+        {
+          "name": "guest",
+          "value": "not-allowed"
+        }
+      ]
+    },
+    {
+      "origin": "https://tr.snapchat.com",
+      "localStorage": [
+        {
+          "name": "u_sclid_r",
+          "value": "IWZ-d092mLzr5r9C9gNT1C16Ov0Whh5UJp96adwfXAG2uLNjJzM8kUekNu-jL9Kp"
+        },
+        {
+          "name": "u_sclid",
+          "value": "IWZ-d092mLzr5r9C9gNT1C16Ov0Whh5UJp96adwfXAG2uLNjJzM8kUekNu-jL9Kp"
+        }
+      ]
+    }
+  ]
+}
