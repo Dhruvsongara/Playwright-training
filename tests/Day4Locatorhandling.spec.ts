@@ -46,6 +46,7 @@ test('checkbox @smoke', async ({ page }) => {
 //   await expect(page.getByText('Round Trip')).toHaveClass(/selected/);
 // });
 
+
 test('Mouse events @smoke', async ({ page }) => {
 
   await page.goto('https://qaplayground.vercel.app/');
